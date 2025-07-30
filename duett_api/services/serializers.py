@@ -13,6 +13,6 @@ class ServiceTypeSerializer(serializers.ModelSerializer):
 
 
 class FundingSourceSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = FundingSource
+class Meta:
+    model = FundingSource
         fields = ["id", "name", "service_type"]
