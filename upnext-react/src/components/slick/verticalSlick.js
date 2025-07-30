@@ -38,13 +38,12 @@ const VerticalSlick = ({ sliderData }) => {
       if (newIndex < sliderData.length) {
         sliderRef.current.slideNext();
         setCurrentSlide(newIndex);
-        setSelectedContent(sliderData[newIndex].content);
-        setSelectedImage(sliderData[newIndex].image);
-      }
-    }
-  };
-
-  const handleSlideSelect = (index) => {
+try {
+    setSelectedContent(sliderData[index].content);
+    setSelectedImage(sliderData[index].image);
+} catch (error) {
+    console.error('Error selecting slide:', error);
+}
     const { image, content } = sliderData[index];
     setCurrentSlide(index);
     setSelectedContent(content);
