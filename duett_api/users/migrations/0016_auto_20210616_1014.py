@@ -33,9 +33,15 @@ class Migration(migrations.Migration):
             field=models.OneToOneField(db_constraint=False, on_delete=django.db.models.deletion.DO_NOTHING, primary_key=True, serialize=False, to='users.account'),
         ),
         migrations.AlterField(
-            model_name='user',
-            name='account',
-            field=models.ForeignKey(blank=True, db_constraint=False, null=True, on_delete=django.db.models.deletion.DO_NOTHING, to='users.account'),
+model_name = 'user'
+name = 'account'
+field = models.ForeignKey(
+    blank=True,
+    db_constraint=False,
+    null=True,
+    on_delete=django.db.models.deletion.DO_NOTHING,
+    to='users.account',
+)
         ),
         migrations.AlterField(
             model_name='userpreferences',
