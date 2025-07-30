@@ -1,0 +1,61 @@
+{
+  "name": "up-next",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@ionic/react": "^6.4.1",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.11.2",
+    "@mui/styles": "^5.11.2",
+    "@mui/x-date-pickers": "^5.0.12",
+    "axios": "^1.2.2",
+    "dotenv": "^16.0.3",
+    "formik": "^2.2.9",
+    "moment": "^2.29.4",
+    "mui-tel-input": "^3.0.2",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-icons": "^4.7.1",
+    "react-loader-spinner": "^5.3.4",
+    "react-router-dom": "^6.6.1",
+    "react-scripts": "5.0.1",
+    "react-slick": "^0.29.0",
+    "react-timer-hook": "^3.0.5",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^10.0.4",
+    "web-vitals": "^2.1.4",
+    "yup": "^0.32.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "client-staging-deploy": "aws s3 sync build/ s3://upnext-react-staging-deploy",
+    "client-staging-cloudfront-invalidation": "aws cloudfront create-invalidation --distribution-id EJ2VMV4RKE3HV --paths '/*' ",
+    "staging-deploy": "npm run build && npm run client-staging-deploy && npm run client-staging-cloudfront-invalidation",
+    "client-production-deploy": "aws s3 sync build/ s3://upnext-react-production",
+    "client-production-cloudfront-invalidation": "aws cloudfront create-invalidation --distribution-id EC87M0VXEVGRR --paths '/*' ",
+    "production-deploy": "npm run build && npm run client-production-deploy && npm run client-production-cloudfront-invalidation",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
