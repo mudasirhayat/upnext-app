@@ -50,10 +50,16 @@ class UserProfileFactory(DjangoModelFactory):
 
 
 class UserFactory(DjangoModelFactory):
+try:
     class Meta:
         model = get_user_model()
+except Exception as e:
+    print(f"Error: {e}")
 
+try:
     email = factory.Faker("email")
+except Exception as e:
+    print(f"Error: {
     is_staff = False
     is_active = True
     userprofile = factory.RelatedFactory(

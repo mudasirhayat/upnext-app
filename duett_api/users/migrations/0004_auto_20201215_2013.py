@@ -19,9 +19,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="providerprofile",
             name="services",
-            field=models.ManyToManyField(to="services.ServiceType"),
-        ),
-        migrations.AddField(
+field = models.ManyToManyField(
+        to="services.ServiceType",
+    )
+
+migrations.AddField
             model_name="providerprofile",
             name="zip_codes",
             field=models.ManyToManyField(to="services.ZipCode"),

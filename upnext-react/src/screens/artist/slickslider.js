@@ -7,10 +7,11 @@ import HorizontalSlick from "../../components/slick/horizontalSlick";
 import VerticalSlick from "../../components/slick/verticalSlick";
 
 const sliderData = [
-  {
-    id: 1,
-    image: image1,
-    content: "Morbi Fermentum Erat Gravida, New York",
+    {
+        image: image1,
+        content: "Morbi Fermentum Erat Gravida, New York",
+    },
+];
     description:
       "Aenean sed ligula venenatis, ullamcorper leo ac, tempor massa. Proin eu rhoncus ex, tristique ultrices massa.",
   },

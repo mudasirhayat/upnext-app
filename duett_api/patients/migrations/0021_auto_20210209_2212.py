@@ -15,8 +15,8 @@ class Migration(migrations.Migration):
             name="frequency",
         ),
         migrations.RemoveField(
-            model_name="patientrequest",
-            name="hours",
+model_name = "patientrequest"
+name = "hours"
         ),
         migrations.RemoveField(
             model_name="patientrequest",

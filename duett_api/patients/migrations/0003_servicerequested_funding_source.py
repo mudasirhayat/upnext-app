@@ -12,9 +12,9 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AddField(
-            model_name="servicerequested",
-            name="funding_source",
+migrations.AddField(
+    model_name="servicerequested",
+    name="funding_source",
             field=models.ForeignKey(
                 blank=True,
                 null=True,

@@ -12,9 +12,11 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AddField(
-            model_name="patient",
-            name="created_by",
+            field=models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name='created_by'),
+            related_name='created_by',
+            verbose_name='Created By',
+            editable=False,
+        )
             field=models.ForeignKey(
                 default=1,
                 on_delete=django.db.models.deletion.DO_NOTHING,
