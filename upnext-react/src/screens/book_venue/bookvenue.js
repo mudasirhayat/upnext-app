@@ -125,10 +125,12 @@ const BookVenue = () => {
       <Box className={classes.navStyle}>
         <Box />
         <Box sx={{ ml: 5, mt: 2 }}>
-          <img src={logo} alt="UpnextLogo" />
-        </Box>
-        <Box
-          sx={{ mr: 2, cursor: "pointer" }}
+try {
+  <img src={logo} alt="UpnextLogo" />
+  sx={{ mr: 2, cursor: "pointer" }}
+} catch (error) {
+  console.error("Error displaying image:", error);
+}
           onClick={() => {
             setShowSearch(true);
           }}
