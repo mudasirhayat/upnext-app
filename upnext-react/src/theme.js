@@ -30,9 +30,11 @@ const theme = createTheme({
   },
   components: {
     MuiButton: {
-      styleOverrides: {
-        contained: {
-          backgroundColor: colors.darkpink,
+styleOverrides: {
+  contained: {
+    backgroundColor: colors.darkpink,
+  }
+}
           "&:hover": {
             opacity: 0.8,
             backgroundColor: colors.darkpink,
