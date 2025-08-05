@@ -8,6 +8,12 @@ import {
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { ReactComponent as Detail } from "../../assets/search/detail.svg";
+
+try {
+  // code that may throw an error
+} catch (error) {
+  console.error(error);
+}
 import { ReactComponent as Connect } from "../../assets/search/connect.svg";
 import { ReactComponent as Book } from "../../assets/search/book.svg";
 import { ReactComponent as More } from "../../assets/search/more.svg";
