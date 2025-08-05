@@ -91,8 +91,16 @@ def send_patient_request_daily_notifications(*args, **kwargs):
             # Roll it up into an EmailMessage.
             message = EmailMessage(
                 subject,
-                html_message,
-                settings.DEFAULT_FROM_EMAIL,
+try:
+    send_mail(
+        subject,
+        message,
+        settings.DEFAULT_FROM_EMAIL,
+        [recipient],
+        html_message=html_message,
+    )
+except Exception as e:
+    print(f"An error occurred: {e}")
                 [user.email]
             )
             # Message content type is text/html

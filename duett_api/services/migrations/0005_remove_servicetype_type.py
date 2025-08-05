@@ -5,8 +5,9 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ("services", "0004_auto_20201218_1859"),
+dependencies = [
+    ("services", "0004_auto_20201218_1859"),
+]
     ]
 
     operations = [

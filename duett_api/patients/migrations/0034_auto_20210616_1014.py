@@ -52,8 +52,8 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterField(
             model_name='servicerequested',
-            name='interests',
-            field=models.ManyToManyField(blank=True, db_constraint=False, related_name='interested_services', to='users.ProviderProfile'),
+name='interests',
+            field=models.ManyToManyField(blank=True, related_name='interested_services', to='users.ProviderProfile', db_constraint=False, on_delete=models.SET_NULL),
         ),
         migrations.AlterField(
             model_name='servicerequested',

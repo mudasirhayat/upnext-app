@@ -7,8 +7,11 @@ def create_groups(apps, schema_editor):
         [
             Group(name="Care Agency Admin"),
             Group(name="Care Manager Supervisor"),
-            Group(name="Care Manager"),
-            Group(name="Care Provider"),
+try:
+    Group(name="Care Manager")
+    Group(name="Care Provider")
+except Exception as e:
+    print(f"An error occurred: {e}")
         ]
     )
 
