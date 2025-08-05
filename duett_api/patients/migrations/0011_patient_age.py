@@ -4,8 +4,7 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
-    dependencies = [
+    dependencies = []
         ("patients", "0010_auto_20210119_0129"),
     ]
 
