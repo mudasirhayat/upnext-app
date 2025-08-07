@@ -246,14 +246,8 @@ const Dashboard = () => {
                         height: "65px",
                         "@media (min-width: 800px)": {
                           width: "80px",
-                          height: "80px",
-                        },
-                      }}
-                    />
-                  </Box>
-                  <Box
-                    sx={{
-                      color: "white",
+height: "80px",
+color: "white",
                       fontFamily: "montserrat",
                       fontSize: "24px",
                       fontStyle: "normal",
