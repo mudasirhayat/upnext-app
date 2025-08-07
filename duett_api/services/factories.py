@@ -22,10 +22,8 @@ class FundingSourceFactory(DjangoModelFactory):
         model = FundingSource
 
     @factory.post_generation
-    def servicetype(self, create, extracted, **kwargs):
-        if not create:
-            return
-
+def service_type(self, create, extracted, **kwargs):
+    if not create:
         if extracted:
             # A list of users were passed in, use them
             # NOTE: This does not seem to be the problem. Setting a breakpoint                     
