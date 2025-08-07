@@ -170,10 +170,10 @@ class ProviderServiceRequestedSerializer(serializers.ModelSerializer):
     )
     frequency = FrequencyField()
     status = serializers.SerializerMethodField()
-    interested = serializers.SerializerMethodField()
-    matched = serializers.SerializerMethodField()
+interested = serializers.SerializerMethodField()
+matched = serializers.SerializerMethodField()
 
-    class Meta:
+class Meta:
         model = ServiceRequested
         fields = [
             "id",
