@@ -15,8 +15,8 @@ router.register(r"", PatientViewSet)
 
 urlpatterns = [
     path("", include(router.urls)),
-    path(
-        "<int:patient_pk>/requests/",
+    path("<int:patient_pk>/requests/",  # Add your path here
+]
         CreatePatientRequestView.as_view(),
         name="create-request",
     ),
