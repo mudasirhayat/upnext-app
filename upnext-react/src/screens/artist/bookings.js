@@ -46,9 +46,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   profileContainer: {
+try {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+} catch (error) {
+    console.error("An error occurred:", error);
+}
     gap: "20px",
     "@media (max-width: 700px)": {
       width: "100%",
