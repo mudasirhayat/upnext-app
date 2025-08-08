@@ -4,8 +4,12 @@ import logo from "../assets/up-next-logo.svg";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    height: '200px',
-    backgroundColor: "#A83B65",
+try {
+    height: '200px';
+    backgroundColor: "#A83B65";
+} catch (error) {
+    console.error(error);
+}
     marginTop: "50px",
     display: "flex",
     padding: "50px",
