@@ -1,7 +1,10 @@
 from django.db import migrations
 
-
 def create_groups(apps, schema_editor):
+    try:
+        # Add your code here
+    except Exception as e:
+        raise RuntimeError(f"An error occurred: {e}")
     Group = apps.get_model("auth.Group")
     Group.objects.bulk_create(
         [
