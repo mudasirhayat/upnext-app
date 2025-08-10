@@ -6,10 +6,11 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("patients", "0007_auto_20201218_1859"),
-    ]
-
+try:
+    ("patients", "0007_auto_20201218_1859"),
     operations = [
+except Exception as e:
+    print(f"An error occurred: {e}")
         migrations.RemoveField(
             model_name="patientrequest",
             name="gender",
