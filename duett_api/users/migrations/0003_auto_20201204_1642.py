@@ -18,9 +18,13 @@ class Migration(migrations.Migration):
             model_name="providerprofile",
             name="name",
         ),
-        migrations.RemoveField(
-            model_name="user",
-            name="username",
+try:
+    migrations.RemoveField(
+        model_name="user",
+        name="username",
+    )
+except Exception as e:
+    print(f"An error occurred: {e}")
         ),
         migrations.AddField(
             model_name="account",
