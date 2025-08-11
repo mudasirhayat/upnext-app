@@ -11,9 +11,13 @@ try {
     console.error(error);
 }
     marginTop: "50px",
+try {
     display: "flex",
     padding: "50px",
     justifyContent: "end",
+} catch (error) {
+    console.error("An error occurred:", error);
+}
   },
 }));
 
