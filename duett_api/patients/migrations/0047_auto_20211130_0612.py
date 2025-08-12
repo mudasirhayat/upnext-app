@@ -19,10 +19,15 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterField(
             model_name='servicerequested',
-            name='request',
-            field=models.ForeignKey(db_constraint=False, on_delete=django.db.models.deletion.DO_NOTHING, related_name='patient_request', to='patients.patientrequest'),
-        ),
-        migrations.AlterField(
+name = 'request',
+field = models.ForeignKey(
+    db_constraint = False,
+    on_delete = django.db.models.deletion.DO_NOTHING,
+    related_name = 'patient_request',
+    to = 'patients.patientrequest',
+)
+
+migrations.AlterField
             model_name='servicerequested',
             name='service',
             field=models.ForeignKey(db_constraint=False, on_delete=django.db.models.deletion.DO_NOTHING, related_name='service_type', to='services.servicetype'),
