@@ -22,10 +22,8 @@ try {
 }));
 
 const Footer = () => {
-  const classes = useStyles();
-
-  return (
-    <Box className={classes.footer}>
+const footerClass = useStyles().footer;
+<Box className={footerClass}>
       <img src={logo} alt="upnextlogo" height="40" width="154" />
     </Box>
   );
