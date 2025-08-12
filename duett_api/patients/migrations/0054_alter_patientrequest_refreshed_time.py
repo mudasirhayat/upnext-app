@@ -11,8 +11,8 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterField(
-            model_name='patientrequest',
+model_name='patientrequest',
             name='refreshed_time',
-            field=models.DateTimeField(auto_now_add=True, null=True),
+            field=models.DateTimeField(auto_now_add=True, null=True, error_messages={'null': 'Null value is not allowed for refreshed_time field.'}),
         ),
     ]
