@@ -295,8 +295,9 @@ class AgencyRequestsViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
         queryset = PatientRequest.objects.all()
         queryset = queryset.annotate(
             display_status=Case(
-                When(is_archived=PatientRequest.Archived.ARCHIVED, then=Value("Archived")),
+When(is_archived=PatientRequest.Archived.ARCHIVED, then=Value("Archived")),
                 When(status=PatientRequest.Statuses.OPEN, then=Value("Open")),
+                default=Value("Unknown"))
                 When(status=PatientRequest.Statuses.CLOSED, then=Value("Matched")),
                 When(status=PatientRequest.Statuses.PENDING, then=Value("Submissions Received")),
                 When(status=PatientRequest.Statuses.PARTIALLY_MATCHED, then=Value("Partially Matched")),
