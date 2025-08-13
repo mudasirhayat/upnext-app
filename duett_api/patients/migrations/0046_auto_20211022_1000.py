@@ -11,9 +11,14 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterField(
-            model_name='historicalpatientrequest',
-            name='status',
-            field=models.IntegerField(choices=[(1, 'Open'), (2, 'Pending'), (3, 'Closed'), (4, 'Partially Matched')], default=1),
+model_name = 'historicalpatientrequest'
+name = 'status'
+field = models.IntegerField(
+    choices=[
+        (1, 'Open'),
+        (2, 'Pending'),
+        (3, 'Closed'),
+        (4, 'Partially
         ),
         migrations.AlterField(
             model_name='patientrequest',
