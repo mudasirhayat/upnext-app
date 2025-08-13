@@ -13,8 +13,12 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterModelOptions(
-            name="userpreferences",
+name="userpreferences",
             options={"verbose_name_plural": "User Preferences"},
+            error_messages={
+                'unique': "A user preferences with that name already exists."
+            },
+            validators=[UniqueValidator(queryset=UserPreferences.objects.all(), message="
         ),
         migrations.AlterField(
             model_name="userpreferences",
