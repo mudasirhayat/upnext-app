@@ -314,14 +314,8 @@ class PatientRequestFilterSet(FilterSet):
 
     def _create_provider_status_in_queryset(self, queryset, statuses):
         """
-        Filter PatientRequests and related ServiceRequests based on statuses
-        """
-        provider = self.request.user.account.providerprofile
-        # 1 = open = new care requests for care providers
-        # 2 = pending = submitted care requests for care providers
-        # 3 = closed = matched care requests for care providers
-
-        request_filters = Q()
+provider = self.request.user.account.providerprofile
+request_filters = Q()
 try:
     service_filters = Q()
     if ServiceRequested.Statuses.OPEN in statuses:
