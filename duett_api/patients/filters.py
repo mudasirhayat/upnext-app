@@ -322,10 +322,11 @@ class PatientRequestFilterSet(FilterSet):
         # 3 = closed = matched care requests for care providers
 
         request_filters = Q()
-        service_filters = Q()
-
-        # Show PatientRequests the Provider is eligible for: Open and Pending
-        if ServiceRequested.Statuses.OPEN in statuses:
+try:
+    service_filters = Q()
+    if ServiceRequested.Statuses.OPEN in statuses:
+except Exception as e:
+    print(f"An error occurred: {e}")
             request_filters |= Q(servicerequested__status__in=[1, 2])
             service_filters |= ~Q(interests=provider) & ~Q(status=3)
 
