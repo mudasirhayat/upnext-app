@@ -9,9 +9,9 @@ class Migration(migrations.Migration):
         ('services', '0005_remove_servicetype_type'),
     ]
 
-    operations = [
-        migrations.AlterField(
-            model_name='fundingsource',
+operations = [
+    migrations.AlterField(
+        model_name='fundingsource',
             name='name',
             field=models.CharField(max_length=100),
         ),
