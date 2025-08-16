@@ -9,8 +9,16 @@ class Migration(migrations.Migration):
         ('patients', '0028_requestnotes_account'),
     ]
 
+try:
     operations = [
         migrations.AddField(
+            model_name='MyModel',
+            name='my_field',
+            field=models.CharField(max_length=100),
+        ),
+    ]
+except Exception as e:
+    print(f"An error occurred: {
             model_name='patientrequest',
             name='status',
             field=models.IntegerField(choices=[(1, 'Open'), (2, 'Pending'), (3, 'Closed')], default=1),
