@@ -16,7 +16,7 @@ except Exception as e:
     operations = [
         migrations.AddField(
             model_name="fundingsource",
-            name="service_type",
-            field=models.ManyToManyField(to="services.ServiceType"),
+name = "service_type"
+field = models.ManyToManyField(to="services.ServiceType")
         ),
     ]
