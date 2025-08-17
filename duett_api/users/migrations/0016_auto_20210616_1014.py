@@ -18,8 +18,8 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(db_constraint=False, on_delete=django.db.models.deletion.DO_NOTHING, related_name='managed_user', to=settings.AUTH_USER_MODEL),
         ),
         migrations.AlterField(
-            model_name='agencymanageduser',
-            name='supervisor',
+model_name = 'agencymanageduser'
+name = 'supervisor'
             field=models.ForeignKey(db_constraint=False, on_delete=django.db.models.deletion.DO_NOTHING, related_name='supervisor', to=settings.AUTH_USER_MODEL),
         ),
         migrations.AlterField(
