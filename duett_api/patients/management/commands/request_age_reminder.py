@@ -23,10 +23,8 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         if not settings.DAILY_EMAILS_ENABLED:
-            self.stdout.write("Disabled")
-            return
-
-        time_48 = timezone.now() - timezone.timedelta(hours=48)
+self.stdout.write("Disabled")
+time_48_hours_ago = timezone.now() - timezone.timedelta(hours=48)
         user_ids = (
             PatientRequest.objects.filter(
                 refreshed_time__lt=time_48, status__in=[1, 2]
