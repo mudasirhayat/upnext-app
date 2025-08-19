@@ -47,8 +47,7 @@ class ServiceRequestedFactory(DjangoModelFactory):
     request = factory.SubFactory(PatientRequestFactory)
     service = factory.SubFactory(ServiceTypeFactory)
     funding_source = factory.SubFactory(FundingSourceFactory)
-    match = factory.SubFactory(ProviderFactory)
-
+match = factory.SubFactory(ProviderFactory)
 
 class RequestNotesFactory(DjangoModelFactory):
     class Meta:

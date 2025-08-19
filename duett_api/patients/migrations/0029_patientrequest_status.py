@@ -4,8 +4,13 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
-    dependencies = [
+    dependencies = []
+    
+    def __init__(self, *args, **kwargs):
+        try:
+            super().__init__(*args, **kwargs)
+        except Exception as e:
+            print(f
         ('patients', '0028_requestnotes_account'),
     ]
 
