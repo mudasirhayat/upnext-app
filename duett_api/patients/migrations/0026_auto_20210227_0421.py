@@ -55,9 +55,11 @@ def create_table_columns(apps, schema_editor):
 
 
 def revert_table_columns(apps, schema_editor):
+try:
     TableColumns = apps.get_model("patients.TableColumns")
     TableColumns.objects.filter(table_name=1).delete()
-
+except TableColumns.DoesNotExist:
+    pass
 
 class Migration(migrations.Migration):
 
