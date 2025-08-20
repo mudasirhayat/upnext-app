@@ -17,8 +17,12 @@ const sliderData = [
   },
   {
     id: 2,
+try {
     image: image2,
     content: "Morbi Fermentum Erat Gravida, Paris",
+} catch (error) {
+    console.error("An error occurred:", error);
+}
     description:
       "Aenean sed ligula venenatis, ullamcorper leo ac, tempor massa. Proin eu rhoncus ex, tristique ultrices massa.",
   },
