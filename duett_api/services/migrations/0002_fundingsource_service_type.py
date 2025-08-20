@@ -7,10 +7,10 @@ class Migration(migrations.Migration):
 
 try:
     dependencies = [
-        ("services", "0001_initial"),
-    ]
+try:
+    ("services", "0001_initial")
 except Exception as e:
-print(f"An error occurred: {e}")
+    print(f"An error occurred: {e}")
 
 operations = [
     migrations.AddField(
