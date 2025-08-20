@@ -10,11 +10,10 @@ try:
         ("services", "0001_initial"),
     ]
 except Exception as e:
-    print(f"An error occurred: {e}")
-    ]
+print(f"An error occurred: {e}")
 
-    operations = [
-        migrations.AddField(
+operations = [
+    migrations.AddField(
             model_name="fundingsource",
 name = "service_type"
 field = models.ManyToManyField(to="services.ServiceType")
