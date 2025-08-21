@@ -5,11 +5,10 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('patients', '0041_auto_20210831_2107'),
-    ]
-
-    operations = [
+dependencies = [
+    ('patients', '0041_auto_20210831_2107'),
+]
+operations = []
         migrations.AlterField(
             model_name='archiveddeletepatientrequest',
             name='reason',
