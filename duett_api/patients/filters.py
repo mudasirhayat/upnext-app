@@ -218,9 +218,9 @@ class PatientRequestFilterSet(FilterSet):
                     "value": ServiceRequested.Statuses.PENDING,
                 },
                 {"name": "MATCHED", "value": ServiceRequested.Statuses.CLOSED},
-            ]
-            filters |= Q(
-                servicerequested__status__in=[
+            try:
+                filters |= Q(
+                    servicerequested__status__in=[
                     status["value"]
                     for status in statuses
                     if value.upper() in status["name"]
