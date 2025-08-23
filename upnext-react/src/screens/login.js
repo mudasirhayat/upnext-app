@@ -188,9 +188,7 @@ const SignIn = () => {
                     id="password"
                     type={showPassword ? "text" : "password"}
                     error={
-                      formik.touched.password && Boolean(formik.errors.password)
-                    }
-                    helperText={
+formik.touched.password && formik.errors.password ? formik.errors.password : null}
                       formik.touched.password ? formik.errors.password : ""
                     }
                     {...formik.getFieldProps("password")}
