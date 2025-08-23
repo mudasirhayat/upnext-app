@@ -115,11 +115,15 @@ class ProviderProfile(TimestampMixin):
         try:
             return self.account.name
         except:
-            return str(self.account_id)
-
+return str(self.account_id)
+        except AttributeError:
+            return None
 
 class AgencyManagedUser(TimestampMixin):
-    supervisor = models.ForeignKey(
+    try:
+        supervisor = models.ForeignKey()
+    except AttributeError:
+        supervisor = None
         User, on_delete=models.DO_NOTHING, db_constraint=False, related_name="supervisor"
     )
     managed_user = models.ForeignKey(
