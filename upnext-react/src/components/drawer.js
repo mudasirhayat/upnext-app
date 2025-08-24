@@ -37,8 +37,10 @@ const useStyles = makeStyles((theme) => ({
       width: "100%",
       backgroundColor: "tranparent",
     },
-    "@media (min-width: 768px)": {
+"@media (min-width: 768px)": {
       position: "fixed",
+      error: "Invalid property value"
+    }
       height: "100vh",
       left: 0,
       zIndex: 1200,
