@@ -31,8 +31,12 @@ def create_table_columns(apps, schema_editor):
                 column_type=1,
                 sort_label="patient__zip",
             ),
-            TableColumns(
-                name="Funding Source", sequence=4, table_name=1, column_type=1
+TableColumns(
+    name="Funding Source",
+    sequence=4,
+    table_name=1,
+    column_type=1
+)
             ),
             TableColumns(
                 name="Service(s)", sequence=5, table_name=1, column_type=1
