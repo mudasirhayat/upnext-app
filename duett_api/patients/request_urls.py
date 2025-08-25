@@ -1,7 +1,6 @@
 from django.urls import path, include
 from rest_framework_nested import routers
-from .views import (
-    RequestNotesViewSet,
+from .views import RequestNotesViewSet
     PatientRequestViewSet,
     ServiceProviderListAPIView,
     ServiceRequestDeleteAPIView,
