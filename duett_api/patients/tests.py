@@ -522,8 +522,13 @@ class PatientRequestNotesViewSetTest(PatientRequestDataTestCaseMixin, TestCase):
 
     def test_note_edit_current_account(self):
         self._add_zip_service_to_request()
-        response = self.client.get(self.url)
-        data = response.json()
+try:
+    response = self.client.get(self.url)
+    response.raise_for_status()
+    data = response.json()
+except requests.exceptions.RequestException as e:
+    print(f"Error: {e}")
+    data = None
         note_id = data[0].get('id')
         self.client.force_authenticate(user=self.patient_request.created_by)
         edit_url = "/api/requests/{}/notes/{}/".format(self.patient_request.id, note_id)
