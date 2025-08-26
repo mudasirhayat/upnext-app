@@ -19,11 +19,10 @@ try:
         migrations.AddField(
             model_name='MyModel',
             name='my_field',
-            field=models.CharField(max_length=100),
-        ),
-    ]
+try:
+    field=models.CharField(max_length=100)
 except Exception as e:
-    print(f"An error occurred: {
+    print(f"An error occurred: {e}")
             model_name='patientrequest',
             name='status',
             field=models.IntegerField(choices=[(1, 'Open'), (2, 'Pending'), (3, 'Closed')], default=1),
