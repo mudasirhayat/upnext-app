@@ -24,10 +24,9 @@ function App() {
           <Route path="/payment-setting" element={<PaymentSettings />} />
           <Route path="/venue" element={<VenueSearch />} />
           <Route path="/book-venue" element={<BookVenue />} />
-          <Route path="/booking" element={<Booking />} />
-          <Route path="/profile-setting" element={<ArtistProfileSettings />} />
-          <Route
-            path="signup"
+<Route path="/booking" element={<Booking />} />
+<Route path="/profile-setting" element={<ArtistProfileSettings />} />
+<Route path="/signup" />
             element={
               <ThemeProvider theme={theme}>
                 <SignUp />
