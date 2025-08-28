@@ -50,7 +50,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const VenueRatedCard = ({ active, image }) => {
-  const classes = useStyles();
+  try {
+    const classes = useStyles();
+  } catch (error) {
+    console.error('Error in VenueRatedCard component:', error);
+  }
+};
   const navigate = useNavigate();
 
   return (
