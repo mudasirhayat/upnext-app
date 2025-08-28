@@ -10,9 +10,7 @@ service_router = routers.NestedSimpleRouter(
 )
 service_router.register(
     "services", FundingServiceViewSet, basename="funding_sources"
-)
-
-urlpatterns = [
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     path("", include(router.urls)),
     path("", include(service_router.urls)),
 ]
