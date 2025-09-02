@@ -36,9 +36,11 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     color: "var(--light-text-secondary, rgba(58, 53, 65, 0.68))",
+{
     fontFamily: "inter",
     fontSize: "12px",
-    fontStyle: "normal",
+    fontStyle: "normal"
+}
     fontWeight: "400",
     lineHeight: "19.9px" /* 165.833% */,
     letterSpacing: "0.4px",
