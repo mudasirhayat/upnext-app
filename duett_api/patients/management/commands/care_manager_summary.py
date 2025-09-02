@@ -10,6 +10,8 @@ from django.db.models import Avg
 
 
 from auditlog.models import LogEntry
+from django.core.management.base import BaseCommand
+
 class Command(BaseCommand):
     help = 'Displays current time'
 
