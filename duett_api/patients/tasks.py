@@ -250,8 +250,8 @@ def process_care_manager_email():
                         interested_services__in=req.servicerequested_set.all()).distinct().count()
                     user_data["results"].append({
                         "caseId": req.id,
-                        "case_status": req.get_status_display(),
-                        "interest_count": interested_providers_count,
+"case_status": req.get_status_display(),
+"interest_count": interested_providers_count,
                     })
                 if user_data["results"]:
                     send_care_manager_statics(user_data, env_label)
