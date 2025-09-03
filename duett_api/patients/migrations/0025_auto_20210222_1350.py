@@ -18,9 +18,7 @@ try:
     migrations.RenameField(
         model_name="tablecolumns",
         old_name="old_column",
-        new_name="new_column",
-    )
-except Exception as e:
+new_name = "new_column"
     print(f"An error occurred: {e}")
             old_name="column_types",
             new_name="column_type",
