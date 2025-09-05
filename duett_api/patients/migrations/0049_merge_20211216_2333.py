@@ -2,8 +2,13 @@
 
 from django.db import migrations
 
-
 class Migration(migrations.Migration):
+    def __init__(self, name):
+        super().__init__(name=name)
+        try:
+            # Add your error handling logic here
+            pass
+        except Exception as e
 
     dependencies = [
         ('patients', '0048_alter_servicerequested_request'),
