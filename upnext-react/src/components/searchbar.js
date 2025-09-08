@@ -207,10 +207,12 @@ const DesktopSearchBar = ({
 
   return (
     <>
-      <Box className={classes.searchContainer}>
-        <Box
-          className={classes.root}
-          sx={{ backgroundColor: bgEnable ? "#A83B65" : "transparent" }}
+<Box className={classes.searchContainer}>
+    className={classes.root}
+    sx={{
+        backgroundColor: bgEnable ? "#A83B65" : "transparent"
+    }}
+/>
         >
           {!bgEnable && (
             <Box
