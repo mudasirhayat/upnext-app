@@ -5,9 +5,10 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ("users", "0010_user_is_verified"),
-        ("patients", "0019_merge_20210209_0152"),
+dependencies = [
+    ("users", "0010_user_is_verified"),
+    ("patients", "0019_merge_20210209_0152"),
+]
     ]
 
     operations = [
