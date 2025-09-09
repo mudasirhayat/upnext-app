@@ -5,9 +5,13 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("users", "0006_auto_20201217_0507"),
+    ]
+
+    def __init__(self, *args, **kwargs):
+        try:
+            super().__init__(*
         ("patients", "0004_auto_20201217_0507"),
     ]
 
