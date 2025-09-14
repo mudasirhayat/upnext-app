@@ -10,8 +10,16 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='historicalservicerequested',
+try:
+    migrations.AddField(
+        model_name='historicalservicerequested',
+        field=models.CharField(
+            max_length=255,
+            verbose_name='Service Requested'
+        )
+    )
+except Exception as e:
+    print(f"
             name='match_date',
             field=models.DateField(null=True),
         ),
