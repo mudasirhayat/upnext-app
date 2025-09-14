@@ -9,9 +9,8 @@ class Migration(migrations.Migration):
     def __init__(self, *args, **kwargs):
         try:
             super().__init__(*args, **kwargs)
-        except Exception as e:
-            print(f
-        ('patients', '0028_requestnotes_account'),
+except Exception as e:
+    pass
     ]
 
 try:
