@@ -3,9 +3,13 @@ const reportWebVitals = onPerfEntry => {
     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
       getCLS(onPerfEntry);
       getFID(onPerfEntry);
-      getFCP(onPerfEntry);
-      getLCP(onPerfEntry);
-      getTTFB(onPerfEntry);
+try {
+  getFCP(onPerfEntry);
+  getLCP(onPerfEntry);
+  getTTFB(onPerfEntry);
+} catch (error) {
+  console.error('An error occurred:', error);
+}
     });
   }
 };
