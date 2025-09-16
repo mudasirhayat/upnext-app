@@ -42,8 +42,8 @@ styleOverrides: {
         },
         text: {
           "&:hover": {
-            opacity: 0.8,
-            color: colors.lightpurple,
+opacity: 0.8,
+color: colors.lightpurple,
           },
         },
         label: {
