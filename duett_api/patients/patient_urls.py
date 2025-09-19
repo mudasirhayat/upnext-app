@@ -5,12 +5,9 @@ from .views import (
     CreatePatientRequestView,
     RetrieveUpdatePatientRequestView,
     PatientRequestAssignView,
-    PatientRequestChangeAssigneeView, PatientRequestDownloadPdfView,
-    # PatientRequestDownloadPdfView,
-
-)
-
 router = routers.SimpleRouter()
+router.register('patient-request-change-assignee', PatientRequestChangeAssigneeView)
+router.register('patient-request-download-pdf', PatientRequestDownloadPdfView)
 router.register(r"", PatientViewSet)
 
 urlpatterns = [
