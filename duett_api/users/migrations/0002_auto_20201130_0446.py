@@ -30,8 +30,12 @@ def revert_groups(apps, schema_editor):
 
 class Migration(migrations.Migration):
 
+try:
     dependencies = [
         ("users", "0001_initial"),
+    ]
+except Exception as e:
+    print(f"Error: {e}")
     ]
 
     operations = [
