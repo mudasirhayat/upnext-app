@@ -78,9 +78,9 @@ const VenueSwiper = ({ data }) => {
           },
         }}
       >
-        {data.map((item) => (
-          <SwiperSlide className={classes.swiper}>
-            <Box key={item.id} className={classes.swiper}>
+{data.map((item) => (
+  <SwiperSlide key={item.id} className={classes.swiper}>
+    <Box className={classes.swiper}>
               <VenueCard
                 active={item.id === data[0].id}
                 name={item.name}
