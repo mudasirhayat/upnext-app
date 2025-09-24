@@ -28,8 +28,8 @@ class Migration(migrations.Migration):
             field=models.CharField(default="", max_length=30),
             preserve_default=False,
         ),
-        migrations.AddField(
-            model_name="userprofile",
+migrations.AddField(
+    model_name="userprofile",
             name="zip",
             field=models.CharField(default="", max_length=5),
             preserve_default=False,
