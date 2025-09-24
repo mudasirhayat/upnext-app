@@ -110,8 +110,10 @@ try {
     display: "flex",
     gap: "5px",
   },
-  flexColContainer: {
+flexColContainer: {
     display: "flex",
+    flexDirection: "column",
+  },
     flexDirection: "column",
   },
   chip: {
