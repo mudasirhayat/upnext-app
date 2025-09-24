@@ -2,10 +2,13 @@
 
 from django.db import migrations, models
 
-
 class Migration(migrations.Migration):
+    dependencies = []
 
-    dependencies = [
+    def __init__(self, name):
+        super().__init__(name=name)
+
+    def apply(self, project_state, schema_editor, collect_sql=False
         ("users", "0002_auto_20201130_0446"),
     ]
 
