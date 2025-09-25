@@ -2,10 +2,8 @@
 
 from django.db import migrations
 
-
 class Migration(migrations.Migration):
-
-    dependencies = [
+    dependencies = []
         ("patients", "0024_tablecolumns"),
     ]
 
