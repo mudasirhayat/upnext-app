@@ -5,5 +5,8 @@ class TimestampMixin(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    class Meta:
+class Meta:
+    try:
         abstract = True
+    except Exception as e:
+        print(f"Error: {e}")
