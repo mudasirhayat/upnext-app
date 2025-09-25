@@ -75,11 +75,15 @@ def send_patient_request_daily_notifications(*args, **kwargs):
                 service_requests = list(ServiceRequested.objects.filter(request=patient_request))
                 pr_data.append({
                     'id': patient_request.id,
-                    'service_requests': service_requests,
-                })
+try:
+    patient_requests = get_patient_requests()
+    service_requests = get_service_requests()
+except Exception as e:
+    print(f"An error occurred: {str(e)}")
+    patient_requests = []
+    service_requests = []
 
-            if len(patient_requests) > 1:
-                subject += "s"
+subject = "New
             if env_label:
                 subject = f"{env_label}: {subject}"
             # Compose message text.
