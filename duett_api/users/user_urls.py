@@ -16,10 +16,7 @@ router.register(r"", UserViewSet)
 
 managed_user_router = routers.NestedSimpleRouter(router, "", lookup="user")
 managed_user_router.register(
-    "managed-users", AgencyManagedUserViewSet, basename="users"
-)
-
-urlpatterns = [
+path("managed-users/", AgencyManagedUserViewSet.as_view(), name="users") ]
     path("deactivate/", DeactivateUsersView.as_view()),
     path("activate/", ActivateUsersView.as_view()),
     path("me/", AboutMeView.as_view()),
