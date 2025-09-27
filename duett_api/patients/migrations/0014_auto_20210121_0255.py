@@ -19,8 +19,12 @@ try:
     ]
 except Exception as e:
     print(f"An error occurred: {e}")
-            name="status",
+name="status",
             field=models.IntegerField(
+                error_messages={
+                    'invalid': "Please enter a valid status."
+                }
+            )
                 choices=[("1", "Open"), ("2", "Pending"), ("3", "Closed")],
                 default="1",
             ),
