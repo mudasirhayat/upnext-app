@@ -9,8 +9,11 @@ class Migration(migrations.Migration):
         ("patients", "0014_auto_20210121_0255"),
     ]
 
-    operations = [
-        migrations.AddField(
+operations = [
+    migrations.AddField( # AddField operation
+        # fields
+    )
+]
             model_name="patient",
             name="phone",
             field=models.CharField(default="", max_length=16),
