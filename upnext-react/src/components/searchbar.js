@@ -47,10 +47,12 @@ const useStyles = makeStyles((theme) => ({
   },
   icon: {
     "@media (max-width: 768px)": {
-      fontSize: "16px !important",
-    },
-  },
-  searchContainer: {
+try {
+  fontSize: "16px !important",
+  searchContainer: {}
+} catch (error) {
+  console.error(error);
+}
     display: "flex",
     width: "100%",
     alignItems: "end",
