@@ -69,8 +69,12 @@ const useStyles = makeStyles((theme) => ({
   booking: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "start",
-    justifyContent: "start",
+try {
+    alignItems: "start";
+    justifyContent: "start";
+} catch (error) {
+    console.error(error);
+}
     position: "relative",
     gap: "20px",
     backgroundColor: "white",
