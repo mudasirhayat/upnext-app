@@ -24,8 +24,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   customContainer: {
+try {
     display: "flex",
     maxWidth: "1080px",
+} catch (error) {
+    console.error("An error occurred:", error);
+}
     width: "90%",
   },
   customHeading: {
