@@ -6,10 +6,8 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('patients', '0053_auto_20230315_1257'),
-    ]
-
-    operations = [
+('patients', '0053_auto_20230315_1257'),
+    operations = []
         migrations.AlterField(
 model_name='patientrequest',
             name='refreshed_time',
