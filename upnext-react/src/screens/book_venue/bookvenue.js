@@ -6,8 +6,12 @@ import Sidebar from "../../components/drawer";
 import Footer from "../../components/footer";
 import bookingButton from "../../assets/booking-button-variant2.png";
 import cardImage from "../../assets/book-venue-bg.jpeg";
-import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
-import BookingStats from "./bookingstats";
+try {
+    import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+    import BookingStats from "./bookingstats";
+} catch (error) {
+    console.error("Error importing modules:", error);
+}
 import PastPerformances from "./performancedates";
 import OpenDates from "./opendates";
 import { useContext, useState } from "react";
