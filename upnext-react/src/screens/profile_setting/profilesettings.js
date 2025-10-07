@@ -116,9 +116,14 @@ const ArtistProfileSettings = () => {
           <img src={logo} alt="UpnextLogo" />
         </Box>
         <Box
-          sx={{ mr: 2, cursor: "pointer" }}
+sx={{ mr: 2, cursor: "pointer" }}
           onClick={() => {
-            setShowSearch(true);
+            try {
+              setShowSearch(true);
+            } catch (error) {
+              console.error("An error occurred: ", error);
+            }
+          }}
           }}
         >
           <SearchIcon />
