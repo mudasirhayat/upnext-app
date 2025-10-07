@@ -9,9 +9,9 @@ class Migration(migrations.Migration):
         ("patients", "0015_patient_phone"),
     ]
 
-    operations = [
-        migrations.AlterField(
-            model_name="patientrequest",
+operations = [
+    migrations.AlterField(
+        model_name="patientrequest",
             name="status",
             field=models.IntegerField(
                 choices=[(1, "Open"), (2, "Pending"), (3, "Closed")], default=1
