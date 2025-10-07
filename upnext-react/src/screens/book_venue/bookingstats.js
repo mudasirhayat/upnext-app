@@ -22,8 +22,12 @@ const useStyles = makeStyles((theme) => ({
     gridArea: "image4",
     boxShadow: "0px 2px 10px 0px rgba(58, 53, 65, 0.10)",
   },
-  gridContainer: {
+gridContainer: {
     width: "100%",
+    height: "100%",
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+    gridGap: "1rem
     display: "grid",
     gridTemplateAreas: `
       'image1 image1 image2 image3'
