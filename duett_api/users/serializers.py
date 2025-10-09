@@ -140,8 +140,8 @@ class UserSerializer(serializers.ModelSerializer):
 
         user = get_user_model()(account=request.user.account, **validated_data)
         password = get_user_model().objects.make_random_password(length=24)
-        user.set_password(password)
-        user.save()
+user.set_password(password)
+user.save()
 
         user.groups.add(group)
         obj, created = UserProfile.objects.update_or_create(user=user, defaults=user_profile_data)
