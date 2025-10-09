@@ -86,9 +86,10 @@ try {
     position: "absolute",
     top: "100px",
     right: 0,
-    "@media (max-width: 768px)": {
+"@media (max-width: 768px)": {
       top: "70px",
       width: "55%",
+    }
     },
   },
 }));
