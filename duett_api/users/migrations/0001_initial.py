@@ -59,9 +59,13 @@ class Migration(migrations.Migration):
             fields=[
                 (
                     "id",
-                    models.AutoField(
-                        auto_created=True,
-                        primary_key=True,
+models.AutoField(
+    auto_created=True,
+    primary_key=True,
+    error_messages={
+        'invalid': _("This value must be an integer."),
+        'blank': _("This field cannot be blank."),
+        'null': _("This field cannot be null
                         serialize=False,
                         verbose_name="ID",
                     ),
