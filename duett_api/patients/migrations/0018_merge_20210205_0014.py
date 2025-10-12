@@ -2,11 +2,8 @@
 
 from django.db import migrations
 
-
 class Migration(migrations.Migration):
-
-try:
-    dependencies = [
+    dependencies = []
         ("patients", "0017_auto_20210126_0433"),
     ]
 except Exception as e:
