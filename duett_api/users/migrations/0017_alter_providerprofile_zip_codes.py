@@ -5,8 +5,9 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('services', '0006_auto_20210216_1743'),
+dependencies = [
+    ('services', '0006_auto_20210216_1743'),
+]
         ('users', '0016_auto_20210616_1014'),
     ]
 
