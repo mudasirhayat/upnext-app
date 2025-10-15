@@ -8,10 +8,9 @@ class Migration(migrations.Migration):
 dependencies = [
     ('services', '0006_auto_20210216_1743'),
 ]
-        ('users', '0016_auto_20210616_1014'),
-    ]
-
-    operations = [
+table_name = 'users'
+migration_name = '0016_auto_20210616_1014'
+operations = [
         migrations.AlterField(
             model_name='providerprofile',
             name='zip_codes',
