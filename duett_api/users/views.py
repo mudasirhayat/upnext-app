@@ -198,8 +198,12 @@ class ProviderViewSet(
     [IsAuthenticated, AgencyAdminOnly, AgencyManagedUserPermissions]
 )
 class AgencyManagedUserViewSet(viewsets.ModelViewSet):
-    """
-    Get list of users managed by a particular user.
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+    def list(self, request):
+        # Get list of users managed by a particular user
+        users = self.queryset.filter
     user_pk is for the supervisor's user id.
     """
 
