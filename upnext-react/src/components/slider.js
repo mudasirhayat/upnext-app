@@ -46,8 +46,12 @@ const useStyles = makeStyles(() => ({
     width: "100%",
     maxWidth: "315px",
     backgroundColor: "#F6E5EC",
-    borderRadius: "5px",
-    padding: "15px",
+try {
+  borderRadius: "5px",
+  padding: "15px",
+} catch (error) {
+  console.error(error);
+}
     paddingTop: "0px",
   },
   paginationContainer: {
