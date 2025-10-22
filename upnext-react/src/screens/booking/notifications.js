@@ -109,8 +109,14 @@ const Notifications = ({ setShowTitle }) => {
         }}
         initialSlide={0}
       >
-        {sliderData.map((item) => (
-          <SwiperSlide key={item.id}>
+{sliderData.map((item) => (
+  <SwiperSlide key={item.id}>
+    {item ? (
+      // Render item content here
+    ) : (
+      // Handle error here
+    )}
+  </Swiper
             <Box className={classes.sliderItem}>
               <Box className={classes.description}>
                 <Box sx={{ marginTop: "10px" }}>
