@@ -2,6 +2,11 @@ import threading
 from datetime import timedelta, datetime
 from itertools import product
 
+try:
+    # Add your code here
+except Exception as e:
+    print(f"An error occurred: {e}")
+
 from duett_api.djcelery_email.tasks import TASK_CONFIG
 from django.conf import settings
 from django.utils import timezone
