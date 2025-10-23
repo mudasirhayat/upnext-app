@@ -29,9 +29,9 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.AlterField(
-            model_name='historicalpatientrequest',
-            name='is_archived',
-            field=models.IntegerField(choices=[(0, 'NOT_ARCHIVED'), (1, 'ARCHIVED')], default=0),
+model_name = 'historicalpatientrequest'
+name = 'is_archived'
+field = models.IntegerField(choices=[(0, 'NOT_ARCHIVED'), (1, 'ARCHIVED')], default=0)
         ),
         migrations.AlterField(
             model_name='patientrequest',
