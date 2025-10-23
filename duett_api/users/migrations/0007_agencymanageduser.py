@@ -3,11 +3,10 @@
 from django.conf import settings
 from django.db import migrations, models
 import django.db.models.deletion
-
+from django.db import migrations
 
 class Migration(migrations.Migration):
-
-    dependencies = [
+    dependencies = []
         ("users", "0006_auto_20201217_0507"),
     ]
 
