@@ -11,7 +11,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterField(
-model_name = 'historicalpatientrequest'
+model_name = 'historical_patient_request'
 name = 'status'
 field = models.IntegerField(
     choices=[
