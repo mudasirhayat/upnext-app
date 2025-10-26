@@ -273,10 +273,11 @@ class PatientRequestViewSetTest(PatientRequestDataTestCaseMixin, TestCase):
 
         account1 = self.provider_user1.account
         self.unique += 1
-        account2 = self.provider_user2.account
-
-        fund_source1 = self.create_funding_source(name="Fund Source 1")
-        fund_source2 = self.create_funding_source(name="Fund Source 2")
+try:
+    account2 = self.provider_user2.account
+    fund_source1 = self.create_funding_source(name="Fund Source 1")
+    fund_source2 = self.create_funding_source(name="Fund Source 2")
+except Exception as e
 
         service_type1 = self.create_service_type(name="Test Service 1")
         service_type2 = self.create_service_type(name="Test Service 2")
