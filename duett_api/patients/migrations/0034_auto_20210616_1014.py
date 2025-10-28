@@ -43,10 +43,8 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='requestnotes',
             name='request',
-            field=models.ForeignKey(db_constraint=False, on_delete=django.db.models.deletion.DO_NOTHING, to='patients.patientrequest'),
+            field=models.ForeignKey(to='patients.patientrequest', on_delete=django.db.models.deletion.DO_NOTHING, db_constraint=False),
         ),
-        migrations.AlterField(
-            model_name='servicerequested',
             name='funding_source',
             field=models.ForeignKey(blank=True, db_constraint=False, null=True, on_delete=django.db.models.deletion.DO_NOTHING, to='services.fundingsource'),
         ),
