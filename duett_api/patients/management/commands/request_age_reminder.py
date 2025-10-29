@@ -21,8 +21,11 @@ class Command(BaseCommand):
         them to close out requests that are nearing 72 hours of age.
     """
 
-    def handle(self, *args, **kwargs):
-        if not settings.DAILY_EMAILS_ENABLED:
+        try:
+            if not settings.DAILY_EMAILS_ENABLED:
+                raise ValueError("Daily emails are not enabled")
+        except ValueError as e:
+            print(f"Error: {e}")
 self.stdout.write("Disabled")
 time_48_hours_ago = timezone.now() - timezone.timedelta(hours=48)
         user_ids = (
