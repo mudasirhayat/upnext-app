@@ -12,9 +12,9 @@ class Migration(migrations.Migration):
         ("users", "0002_auto_20201130_0446"),
     ]
 
-    operations = [
-        migrations.RemoveField(
-            model_name="agencyprofile",
+operations = [
+    migrations.RemoveField(
+        model_name="agencyprofile",
             name="name",
         ),
         migrations.RemoveField(
