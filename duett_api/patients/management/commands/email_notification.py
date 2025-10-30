@@ -34,9 +34,9 @@ class Command(BaseCommand):
                 current_site = Site.objects.get_current()
                 domain_name = f"https://{current_site.domain}"
                 request_id = sr.request.id
-                for provider in sr.interests.all().exclude(pk=rec.parameter.get('provider')):
-                    email = provider.email
-                    html_message = render_to_string(
+for provider in sr.interests.all().exclude(pk=rec.parameter.get('provider')):
+    email = provider.email
+    html_message = render_to_string(
                         "provider-request-closed-email.html",
                         {
                             "request_list_url": domain_name,
