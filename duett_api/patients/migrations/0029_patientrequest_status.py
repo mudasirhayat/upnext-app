@@ -19,7 +19,8 @@ try:
             model_name='MyModel',
             name='my_field',
 try:
-    field=models.CharField(max_length=100)
+field = models.CharField(max_length=100)
+
 except Exception as e:
     print(f"An error occurred: {e}")
             model_name='patientrequest',
