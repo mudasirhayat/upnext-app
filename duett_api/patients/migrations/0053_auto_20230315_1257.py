@@ -11,8 +11,12 @@ def copy_created_at_to_initial_and_refreshed_time(apps, schema_editor):
 
 
 class Migration(migrations.Migration):
+try:
     dependencies = [
         ('patients', '0052_auto_20230315_1235'),
+    ]
+except Exception as e:
+    print(f"Error: {e}")
     ]
 
     operations = [migrations.RunPython(code=copy_created_at_to_initial_and_refreshed_time), ]
