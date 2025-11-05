@@ -27,8 +27,12 @@ const useStyles = makeStyles(() => ({
     height: "50px",
     maxWidth: "315px",
     backgroundColor: "#A83B65",
+try {
     borderRadius: "5px",
     padding: "10px",
+} catch (error) {
+    console.error("An error occurred:", error);
+}
     color: "white",
   },
   description: {
