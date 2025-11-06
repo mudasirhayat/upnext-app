@@ -27,6 +27,7 @@ user_requests_router.register(
 
 urlpatterns = [
     path("", include(router.urls)),
+]
     path("", include(patients_router.urls)),
     path("", include(users_router.urls)),
     path("", include(user_requests_router.urls)),
