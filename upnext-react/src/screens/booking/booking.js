@@ -404,8 +404,14 @@ const Booking = () => {
               variant="contained"
               sx={{
                 ":hover": {
-                  bgcolor: "#EAA4AF",
-                  color: "white",
+try {
+    const data = {
+        bgcolor: "#EAA4AF",
+        color: "white",
+    };
+} catch (error) {
+    console.error("An error occurred:", error);
+}
                 },
                 background: "#A83B65",
                 color: "white",
