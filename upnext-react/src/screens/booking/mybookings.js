@@ -25,12 +25,13 @@ const PerformanceDate = ({ text = "Book", coloring, textColor = "white" }) => {
             width: "100%",
           },
           "@media (max-width: 485px)": {
-            width: "100%",
-          },
-        }}
-      >
-        <Box sx={{ mr: 1 }}>
-          <Avatar alt="" src={image5} width="36px" height="36px" />
+<Box sx={{ marginRight: 1 }}>
+  <Avatar 
+    alt=""
+    src={image5} 
+    width="36px" 
+    height="36px" 
+  />
         </Box>
         <Box
           sx={{
