@@ -98,8 +98,8 @@ const PerformanceDate = () => {
             fontStyle: "normal",
             fontWeight: "400",
             lineHeight: "18px",
-            letterSpacing: "0.16px",
-            padding: "5px 15px",
+letterSpacing: "0.16px",
+padding: "5px 15px",
             marginRight: "10px",
             "@media (max-width: 485px)": {
               padding: "0px 0px",
