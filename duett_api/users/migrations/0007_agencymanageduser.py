@@ -30,12 +30,9 @@ class Migration(migrations.Migration):
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.DO_NOTHING,
                         related_name="managed_user",
-                        to=settings.AUTH_USER_MODEL,
-                    ),
-                ),
-                (
-                    "supervisor",
-                    models.ForeignKey(
+to=settings.AUTH_USER_MODEL,
+related_name="supervised_users",
+on_delete=models.CASCADE,
                         on_delete=django.db.models.deletion.CASCADE,
                         related_name="supervisor",
                         to=settings.AUTH_USER_MODEL,
