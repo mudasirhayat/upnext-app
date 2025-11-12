@@ -8,11 +8,10 @@ class Migration(migrations.Migration):
 
     def apply(self, project_state, schema_editor, collect_sql=False
 
-    dependencies = [
-        ("patients", "0012_patientrequest_created_by"),
-    ]
-
-    operations = [
+dependencies = [
+    ("patients", "0012_patientrequest_created_by"),
+]
+operations = []
         migrations.AddField(
             model_name="patientrequest",
             name="notes",
