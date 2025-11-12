@@ -6,10 +6,9 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("patients", "0022_servicerequested_requested_schedule"),
-    ]
-
-    operations = [
+tables = [
+    ("patients", "0022_servicerequested_requested_schedule")
+]
         migrations.AlterField(
             model_name="servicerequested",
             name="hours",
