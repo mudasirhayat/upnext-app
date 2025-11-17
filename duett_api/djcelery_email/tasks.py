@@ -36,8 +36,10 @@ def send_emails(messages, backend_kwargs=None, **kwargs):
     # make sure they're all dicts
     messages = [email_to_dict(m) for m in messages]
 
-    conn = get_connection(backend=settings.CELERY_EMAIL_BACKEND, **combined_kwargs)
-    try:
+conn = get_connection(
+    backend=settings.CELERY_EMAIL_BACKEND,
+    **combined_kwargs
+)
 conn.open()
 except Exception:
         logger.exception("Cannot reach CELERY_EMAIL_BACKEND %s", settings.CELERY_EMAIL_BACKEND)
