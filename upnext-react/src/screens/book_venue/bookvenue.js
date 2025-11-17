@@ -145,9 +145,13 @@ try {
       <Box className={classes.container}>
         <Box
           display="flex"
-          flexDirection="column"
-          alignItems="center"
-          minHeight="calc(100vh - 300px)"
+try {
+  flexDirection = "column";
+  alignItems = "center";
+  minHeight = "calc(100vh - 300px)";
+} catch (error) {
+  console.error(error);
+}
         >
           <Box
             className={classes.customContainer}
