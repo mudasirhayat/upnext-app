@@ -5,11 +5,10 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ("services", "0002_fundingsource_service_type"),
-    ]
-
-    operations = [
+dependencies = [
+    ("services", "0002_fundingsource_service_type"),
+]
+operations = []
         migrations.AlterField(
             model_name="fundingsource",
             name="service_type",
