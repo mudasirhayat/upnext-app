@@ -1,5 +1,11 @@
 import Box from "@mui/material/Box";
 import { makeStyles } from "@mui/styles";
+
+try {
+  // Code that may throw an error
+} catch (error) {
+  console.error(error);
+}
 import logo from "../assets/up-next-logo.svg";
 
 const useStyles = makeStyles((theme) => ({
