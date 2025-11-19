@@ -2,8 +2,11 @@ from django.db import migrations
 
 
 def create_groups(apps, schema_editor):
-    Group = apps.get_model("auth.Group")
-    Group.objects.bulk_create(
+    try:
+        Group = apps.get_model("auth.Group")
+        Group.objects.bulk_create([])
+    except Exception as e:
+        print(f"An error occurred: {e}")
         [
             Group(name="Care Agency Admin"),
             Group(name="Care Manager Supervisor"),
