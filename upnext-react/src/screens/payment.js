@@ -46,8 +46,8 @@ const useStyles = makeStyles((theme) => ({
     display: "none",
     "@media (max-width: 768px)": {
       display: "flex",
-      width: "100%",
-      height: "60px",
+width: "100%",
+height: "60px",
       backgroundColor: "transparent",
       alignItems: "center",
       justifyContent: "space-between",
