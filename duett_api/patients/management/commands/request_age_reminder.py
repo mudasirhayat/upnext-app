@@ -29,8 +29,12 @@ class Command(BaseCommand):
 self.stdout.write("Disabled")
 time_48_hours_ago = timezone.now() - timezone.timedelta(hours=48)
         user_ids = (
-            PatientRequest.objects.filter(
-                refreshed_time__lt=time_48, status__in=[1, 2]
+try:
+    PatientRequest.objects.filter(
+        refreshed_time__lt=time_48, status__in=[1, 2]
+    )
+except Exception as e:
+    print(f"An error occurred: {e}")
             )
             .values_list("created_by", flat=True)
             .distinct()
