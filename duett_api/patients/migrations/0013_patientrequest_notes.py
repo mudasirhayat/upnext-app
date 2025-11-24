@@ -14,7 +14,7 @@ dependencies = [
 operations = []
         migrations.AddField(
             model_name="patientrequest",
-            name="notes",
-            field=models.CharField(blank=True, max_length=500),
+name = "notes"
+field = models.CharField(blank=True, max_length=500)
         ),
     ]
