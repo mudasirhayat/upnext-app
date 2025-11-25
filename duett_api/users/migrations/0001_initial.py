@@ -8,11 +8,13 @@ class Migration(migrations.Migration):
 
     initial = True
 
+try:
     dependencies = [
         ("auth", "0012_alter_user_first_name_max_length"),
     ]
-
-    operations = [
+    operations = []
+except Exception as e:
+    print(f"An error occurred: {str(e)}")
         migrations.CreateModel(
             name="User",
             fields=[
