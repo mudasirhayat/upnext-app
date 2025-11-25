@@ -17,8 +17,8 @@ class Migration(migrations.Migration):
         ),
 migrations.AlterField(
     model_name='patient',
-    name='email',
-            field=models.EmailField(blank=True, max_length=254, null=True),
+name = 'email'
+field = models.EmailField(blank=True, max_length=254, null=True)
         ),
         migrations.AlterUniqueTogether(
             name='patient',
