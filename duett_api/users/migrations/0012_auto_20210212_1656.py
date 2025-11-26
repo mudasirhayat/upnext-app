@@ -20,10 +20,11 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterField(
             model_name="userprofile",
-            name="city",
+name="city",
             field=models.CharField(blank=True, max_length=50, null=True),
-        ),
-        migrations.AlterField(
+        )
+    except Exception as e:
+        print(f"An error occurred: {e}")
             model_name="userprofile",
             name="state",
             field=models.CharField(blank=True, max_length=30, null=True),
