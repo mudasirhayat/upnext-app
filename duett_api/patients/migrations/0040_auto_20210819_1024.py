@@ -15,8 +15,8 @@ operations = []
             field=models.CharField(max_length=10),
         ),
         migrations.AlterField(
-            model_name='patient',
+model_name='patient',
             name='zip',
-            field=models.CharField(max_length=10),
+            field=models.CharField(max_length=10, error_messages={'max_length': 'Zip code must be 10 characters or less'})
         ),
     ]
