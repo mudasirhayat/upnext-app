@@ -13,9 +13,9 @@ const useStyles = makeStyles(() => ({
     width: "100%",
   },
   sliderItem: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
+display: "flex",
+flexDirection: "column",
+alignItems: "center",
     justifyContent: "space-between",
     marginBottom: "20px",
     margin: "0px 20px",
