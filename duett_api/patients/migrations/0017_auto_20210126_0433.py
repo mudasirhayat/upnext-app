@@ -14,9 +14,9 @@ class Migration(migrations.Migration):
 migrations.AddField(
     model_name="patientrequest",
             name="hides",
-            field=models.ManyToManyField(
-                blank=True,
-                related_name="provider_hides",
+field = models.ManyToManyField(
+    blank=True,
+    related_name="provider_hides",
                 to="users.ProviderProfile",
             ),
         ),
