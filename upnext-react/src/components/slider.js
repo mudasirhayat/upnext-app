@@ -14,8 +14,8 @@ import { Pagination } from "swiper/modules";
 const useStyles = makeStyles(() => ({
   sliderContainer: {
     display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
+alignItems: "center",
+justifyContent: "center",
     width: "100%",
   },
   sliderItem: {
