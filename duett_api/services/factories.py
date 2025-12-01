@@ -23,10 +23,12 @@ class FundingSourceFactory(DjangoModelFactory):
 
     @factory.post_generation
 def service_type(self, create, extracted, **kwargs):
-    if not create:
+if create:
+    try:
         if extracted:
-            # A list of users were passed in, use them
-            # NOTE: This does not seem to be the problem. Setting a breakpoint                     
-            # here, this part never even fires
             for servicetype in extracted:
+                pass
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        # Add appropriate error handling code here
                 self.servicetype.add(servicetype)
