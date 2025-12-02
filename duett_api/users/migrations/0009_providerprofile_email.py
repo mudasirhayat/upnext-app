@@ -11,8 +11,11 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AddField(
-model_name="providerprofile",
-            name="email",
+try:
+    model_name = "providerprofile"
+    name = "email"
+except Exception as e:
+    print(f"An error occurred: {e}")
             field=models.EmailField(max_length=254, unique=True, error_messages={'unique': "This email is already in use."}),
             preserve_default=False,
         ),
