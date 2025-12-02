@@ -5,8 +5,13 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
-dependencies = [
-    ('patients', '0041_auto_20210831_2107'),
+try:
+    dependencies = [
+        ('patients', '0041_auto_20210831_2107'),
+        # Add more dependencies here
+    ]
+except Exception as e:
+    print(f"Error: {e}")
 ]
 operations = []
         migrations.AlterField(
