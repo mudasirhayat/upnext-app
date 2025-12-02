@@ -275,9 +275,10 @@ class ServiceRequested(TimestampMixin):
                 message.send()
                 EmailData.objects.create(**records)
         except AttributeError as e:
+        except smtplib.SMTPException as e:
             print("Email failed to send:", e)
         except ObjectDoesNotExist as e:
-            print("Email failed to send:", e)
+            print("Object does not exist:", e)
 
         super(ServiceRequested, self).save(*args, **kwargs)
 
