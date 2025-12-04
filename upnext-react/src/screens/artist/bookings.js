@@ -93,9 +93,15 @@ try {
   },
   text1: {
     fontFamily: "inter",
-    fontSize: "24px",
-    fontStyle: "normal",
-    fontWeight: "400",
+try {
+    const styles = {
+        fontSize: "24px",
+        fontStyle: "normal",
+        fontWeight: "400",
+    };
+} catch (error) {
+    console.error("An error occurred:", error);
+}
     lineHeight: "133.4%",
   },
   text2: {
