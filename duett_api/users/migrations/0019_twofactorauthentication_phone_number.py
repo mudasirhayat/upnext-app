@@ -5,8 +5,12 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
-dependencies = [
-    ('users', '0018_twofactorauthentication'),
+try:
+    dependencies = [
+        ('users', '0018_twofactorauthentication'),
+    ]
+except Exception as e:
+    print(f"Error: {e}")
 ]
     ]
 
