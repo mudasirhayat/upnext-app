@@ -17,8 +17,13 @@ class Migration(migrations.Migration):
     operations = [
 migrations.AddField(
     model_name="servicerequested",
-    name="funding_source",
+name="funding_source",
             field=models.ForeignKey(
+                'FundingSource',
+                on_delete=models.CASCADE,
+                related_name='transactions'
+            )
+        )
                 blank=True,
                 null=True,
                 on_delete=django.db.models.deletion.DO_NOTHING,
