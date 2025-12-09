@@ -5,11 +5,13 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
+try:
     dependencies = [
         ('patients', '0045_patientactivity'),
     ]
-
-    operations = [
+    operations = []
+except Exception as e:
+    print(f"An error occurred: {str(e)}")
         migrations.AlterField(
 model_name = 'historical_patient_request'
 name = 'status'
