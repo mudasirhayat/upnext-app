@@ -13,7 +13,12 @@ except Exception as e:
 print(f"An error occurred: {e}")
 
 operations = [
-migrations.AddField(
+    migrations.AddField( # Add a field
+        model_name='MyModel',
+        name='my_field',
+        field=models.CharField(max_length=100),
+    ),
+]
     model_name="fundingsource",
     name="service_type",
     # Add more parameters here if needed
