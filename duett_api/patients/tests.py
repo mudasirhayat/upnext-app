@@ -512,9 +512,14 @@ class PatientRequestNotesViewSetTest(PatientRequestDataTestCaseMixin, TestCase):
     def _add_zip_service_to_request(self, zip="12345"):
         self._add_notes_to_patient_request(self.patient_request)
         self.url = "/api/requests/{}/notes/".format(self.patient_request.id)
-        self.client.force_authenticate(user=self.patient_request.created_by)
-        service_type = ServiceTypeFactory(name="Stress Relief")
-        zip = ZipCodeFactory(zip=zip)
+try:
+    self.client.force_authenticate(user=self.patient_request.created_by)
+except Exception as e:
+    print(f"Error authenticating user: {e}")
+
+try:
+    service_type = ServiceTypeFactory(name="Stress Relief")
+except Exception as
         p1 = ProviderFactory(account=self.patient_request.created_by.account, phone="123456", email=f"{self.unique}123test3@example.com")
         p1.services.add(service_type)
         p1.zip_codes.add(zip)
