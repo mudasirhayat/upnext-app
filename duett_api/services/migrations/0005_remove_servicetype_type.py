@@ -2,10 +2,11 @@
 
 from django.db import migrations
 
-
 class Migration(migrations.Migration):
+    dependencies = []
 
-dependencies = [
+    def __init__(self, name):
+        super().__init__(name=name)
     ("services", "0004_auto_20201218_1859"),
 ]
     ]
