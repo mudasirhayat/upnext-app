@@ -8,8 +8,11 @@ class Migration(migrations.Migration):
     def __init__(self, name):
         super(Migration, self).__init__(name=name)
 
-    def apply(self, project_state, schema_editor
-        ('users', '0019_twofactorauthentication_phone_number'),
+def apply(self, project_state, schema_editor):
+    try:
+        schema_editor.alter_field('users', 'phone_number', self.field)
+    except Exception as e:
+        print(f"An error occurred: {e}")
     ]
 
     operations = [
