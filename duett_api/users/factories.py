@@ -4,7 +4,7 @@ from duett_api.patients.models import PatientRequest
 import factory
 import factory.fuzzy
 from django.contrib.auth import get_user_model
-import django.contrib.auth.models as auth_models
+from django.contrib.auth import models as auth_models
 from factory.django import DjangoModelFactory
 
 from duett_api.users.models import (
