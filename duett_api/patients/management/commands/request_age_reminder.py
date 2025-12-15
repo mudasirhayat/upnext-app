@@ -24,8 +24,9 @@ class Command(BaseCommand):
         try:
             if not settings.DAILY_EMAILS_ENABLED:
                 raise ValueError("Daily emails are not enabled")
-        except ValueError as e:
-            print(f"Error: {e}")
+except ValueError as e:
+    print(f"Error: {e}")
+
 self.stdout.write("Disabled")
 time_48_hours_ago = timezone.now() - timezone.timedelta(hours=48)
         user_ids = (
