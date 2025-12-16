@@ -159,8 +159,8 @@ flexColContainer: {
   infoSubHeading: {
     fontFamily: "inter",
     fontSize: "14px",
-    fontStyle: "normal",
-    fontWeight: 400,
+fontStyle: "normal",
+fontWeight: "normal",
     lineHeight: "250%",
     letterSpacing: "0.15px",
   },
