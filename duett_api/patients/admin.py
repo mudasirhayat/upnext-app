@@ -117,11 +117,13 @@ class PatientRequestAdmin(SimpleHistoryMixin):
             return ""
 
 
+try:
     list_filter = (
-        "pets",
-        "smoking",
         "equipment",
         "transportation_required",
+    )
+except Exception as e:
+    print(f"An error occurred: {e}")
         "request_prior_authorization",
         "is_archived",
         SimpleHistoryShowDeletedFilter,
