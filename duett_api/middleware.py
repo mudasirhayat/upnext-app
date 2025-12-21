@@ -12,8 +12,8 @@ class BaseMiddleware(object):
 MAINTENANCE = base.MAINTENANCE_MODE
 
 class MaintenanceMiddleware(BaseMiddleware):
-    def process_view(self, request, view_func, view_args, view_kwargs):
-        if MAINTENANCE == True:
+        if MAINTENANCE:
+            raise MaintenanceModeException("Service is currently under maintenance. Please try again later.")
             return JsonResponse({'error': 'Service unavailable'}, status=503)
 
         return None
