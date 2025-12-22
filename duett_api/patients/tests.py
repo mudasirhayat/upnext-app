@@ -312,9 +312,9 @@ except Exception as e
         ) 
 
         self.patient2 = self.create_patient(zip="3200")
-        self.patient_request2 = PatientRequestFactory(
-            created_by=self.create_user(),
-            patient=self.patient2,
+self.patient_request2 = PatientRequestFactory(
+    created_by=self.create_user(),
+    patient=self.patient2,
             status=1
         )
         self.service1 = self.create_service_requested(self.patient_request, name="Covid Test", service_type=service_type1,
