@@ -17,6 +17,10 @@ name = "UserPreferences"
 models.AutoField(auto_created=True,
                         primary_key=True,
                         serialize=False,
+                        error_messages={
+                            'invalid': ("Primary key must be unique."),
+                            'required': ("Primary key is required."),
+                            'null': ("Primary key cannot be null
                         verbose_name="ID",
                     ),
                 ),
