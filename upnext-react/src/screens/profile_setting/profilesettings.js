@@ -117,10 +117,13 @@ const ArtistProfileSettings = () => {
         </Box>
         <Box
 sx={{ mr: 2, cursor: "pointer" }}
-          onClick={() => {
-            try {
-              setShowSearch(true);
-            } catch (error) {
+onClick={() => {
+    try {
+        setShowSearch(true);
+    } catch (error) {
+        console.error(error);
+    }
+}
               console.error("An error occurred: ", error);
             }
           }}
