@@ -44,8 +44,8 @@ class Patient(TimestampMixin):
     class Meta:
         unique_together = (
             "first_name",
-            "last_name",
-            "birth_date",
+"last_name",
+"birth_date",
         )
 
     def _first_name(self):
