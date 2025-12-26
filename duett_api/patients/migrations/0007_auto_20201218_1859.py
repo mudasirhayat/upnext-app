@@ -31,8 +31,8 @@ field=models.DateTimeField(auto_now_add=True, default=django.utils.timezone.now)
         ),
         migrations.AddField(
             model_name="patientrequest",
-            name="updated_at",
-            field=models.DateTimeField(auto_now=True),
+name = "updated_at"
+field = models.DateTimeField(auto_now=True)
         ),
         migrations.AddField(
             model_name="requestnotes",
