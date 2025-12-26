@@ -133,9 +133,11 @@ const Slick = ({ setShowTitle }) => {
                 <Box
                   sx={{
                     width: "50%",
-                    fontFamily: "inter",
-                    fontSize: "14px",
-                    fontStyle: "normal",
+font: {
+    family: "inter",
+    size: "14px",
+    style: "normal",
+},
                     fontWeight: 400,
                     lineHeight: "20px",
                     letterSpacing: "0.15px",
