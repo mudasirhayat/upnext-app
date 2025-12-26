@@ -21,9 +21,7 @@ except Exception as e:
 
 def revert_groups(apps, schema_editor):
     Group = apps.get_model("auth.Group")
-    Group.objects.filter(
-        name__in=[
-            "Care Agency Admin",
+Group.objects.filter(name="Care Agency Admin")
             "Care Manager Supervisor",
             "Care Manager",
             "Care Provider",
