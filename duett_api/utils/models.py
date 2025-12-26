@@ -10,6 +10,7 @@ class TimestampMixin(models.Model):
 
 class Meta:
     try:
-        abstract = True
-    except Exception as e:
-        print(f"Error: {e}")
+try:
+    abstract = True
+except Exception as e:
+    print(f"Error: {e}")
