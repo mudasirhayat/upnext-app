@@ -176,10 +176,9 @@ class ProviderServiceRequestedSerializerTestCase(
 
     def _get_serializer(self):
         return ProviderServiceRequestedSerializer(
-            self.obj, context=dict(request=self.request)
-        )
-
-    def test_get_interested__negative(self):
+self.obj, context={'request': self.request}
+        
+    def test_get_interested_negative(self):
         serializer = self._get_serializer()
         self.assertFalse(serializer.get_interested(self.obj))
 
