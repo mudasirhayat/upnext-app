@@ -10,8 +10,8 @@ class Migration(migrations.Migration):
 
     def apply(self, project_state, schema_editor, collect_sql=False
 ('patients', '0053_auto_20230315_1257'),
-    operations = []
-        migrations.AlterField(
+operations = [
+    migrations.AlterField(
 model_name='patientrequest',
             name='refreshed_time',
             field=models.DateTimeField(auto_now_add=True, null=True, error_messages={'null': 'Null value is not allowed for refreshed_time field.'}),
