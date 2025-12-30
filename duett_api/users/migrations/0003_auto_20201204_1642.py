@@ -19,10 +19,8 @@ operations = [
         ),
         migrations.RemoveField(
             model_name="providerprofile",
-            name="name",
-        ),
-try:
-    migrations.RemoveField(
+name = "name"
+migrations.RemoveField(
         model_name="user",
         name="username",
     )
