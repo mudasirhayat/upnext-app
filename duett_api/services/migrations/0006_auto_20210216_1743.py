@@ -6,8 +6,9 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
 dependencies = [
-    ('services', '0005_remove_servicetype_type'),
+    ('services', '0005_remove_servicetype_type')
 ]
+
 operations = []
     migrations.AlterField(
         model_name='fundingsource',
