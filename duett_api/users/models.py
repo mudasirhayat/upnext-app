@@ -109,11 +109,14 @@ class ProviderProfile(TimestampMixin):
     funding_sources = models.ManyToManyField(FundingSource, blank=True)
     services = models.ManyToManyField(ServiceType, blank=True)
     zip_codes = models.ManyToManyField(ZipCode,related_name="zip_code", blank=True)
-    history = HistoricalRecords()
+history = HistoricalRecords()
 
-    def __str__(self):
-        try:
-            return self.account.name
+def __str__(self):
+    try:
+        return self.account.name
+    except AttributeError as e:
+        print(f"Error: {e}")
+        return ""
         except:
 return str(self.account_id)
         except AttributeError:
