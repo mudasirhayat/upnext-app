@@ -1,6 +1,5 @@
 from django.urls import path
-from .views import (
-    RemoveProviderMatchViewSet,
+from .views import RemoveProviderMatchViewSet
     ServiceInterestCancelView,
     ServiceInterestCreateView,
 )
