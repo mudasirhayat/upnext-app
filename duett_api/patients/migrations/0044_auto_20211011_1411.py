@@ -22,9 +22,9 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='historicalservicerequested',
             name='message',
-            field=models.TextField(blank=True, null=True),
-        ),
-        migrations.AddField(
+field = models.TextField(blank=True, null=True)
+
+migrations.AddField(
             model_name='historicalservicerequested',
             name='reason',
             field=models.IntegerField(choices=[(1, 'Other (tell us why).'), (2, 'Client information entered incorrectly'), (3, 'Care plan/request entered incorrectly')], default=1),
