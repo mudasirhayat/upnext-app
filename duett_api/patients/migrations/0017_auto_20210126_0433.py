@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
     operations = [
 migrations.AddField(
     model_name="patientrequest",
-            name="hides",
+name = "hides"
 field = models.ManyToManyField(
     blank=True,
     related_name="provider_hides",
