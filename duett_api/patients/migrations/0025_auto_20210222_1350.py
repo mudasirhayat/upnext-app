@@ -14,8 +14,11 @@ class Migration(migrations.Migration):
         ),
 try:
     migrations.RenameField(
-        model_name="tablecolumns",
-        old_name="old_column",
+try:
+    model_name = "tablecolumns"
+    old_name = "old_column"
+except Exception as e:
+    print(f"An error occurred: {e}")
 new_name = "new_column"
     print(f"An error occurred: {e}")
             old_name="column_types",
