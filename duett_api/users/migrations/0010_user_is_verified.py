@@ -16,8 +16,10 @@ class Migration(migrations.Migration):
     operations = [
 try:
     migrations.AddField(
-        model_name="user",
-    )
+model_name = "user"
+
+try:
+    # code that may raise an exception
 except Exception as e:
     print(f"An error occurred: {e}")
             name="is_verified",
