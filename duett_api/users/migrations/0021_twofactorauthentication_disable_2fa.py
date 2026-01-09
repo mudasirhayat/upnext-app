@@ -10,8 +10,10 @@ class Migration(migrations.Migration):
         try:
             super().__init__(*args, **kwargs)
         except Exception as e:
-            print(f"Error initializing migration
-        ('users', '0020_twofactorauthentication_last_prompted_provider'),
+try:
+    print(f"Error initializing migration ('users', '0020_twofactorauthentication_last_prompted_provider')")
+except Exception as e:
+    print(f"An error occurred: {str(e)}")
     ]
 
 try:
