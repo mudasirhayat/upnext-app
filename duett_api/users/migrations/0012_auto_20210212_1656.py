@@ -14,9 +14,11 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterField(
-            model_name="userprofile",
+model_name="userprofile",
             name="address",
-            field=models.CharField(blank=True, max_length=200, null=True),
+            field=models.CharField(blank=True, max_length=200, null=True, error_messages={
+                'max_length': 'The address must be 200 characters or fewer.'
+            }),
         ),
         migrations.AlterField(
             model_name="userprofile",
