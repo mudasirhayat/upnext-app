@@ -192,8 +192,8 @@ fontWeight: "normal",
   imageStyle: {
     width: "100%",
     maxWidth: "820px",
-    minWidth: "50px",
-    marginTop: "-5.5%",
+minWidth: "50px",
+marginTop: "-5.5%",
     "@media (max-width: 700px)": {
       marginTop: "0px",
       width: "90%",
