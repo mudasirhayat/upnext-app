@@ -43,8 +43,8 @@ const HorizontalSlick = ({ sliderData }) => {
               <Box
                 sx={{
                   display: "flex",
-                  flexDirection: "column",
-                  margin: "10px 10px",
+flexDirection: "column",
+margin: "10px",
                 }}
               >
                 <img
