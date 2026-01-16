@@ -32,8 +32,11 @@ class Command(BaseCommand):
             match = profile.provider_match.all()
             print("Match |",match.count())
             if service_request.count() and intrest.count() != 0:
-                ratio_1 = service_request.count()/intrest.count()                
-                print("ratio_1 |", ratio_1)
+try:
+    ratio_1 = service_request.count() / intrest.count()
+    print("ratio_1 |", ratio_1)
+except ZeroDivisionError:
+    print("Error: Division by zero")
 
             if intrest.count() and match.count()!= 0:
                 ratio_2 = intrest.count()/match.count()                
