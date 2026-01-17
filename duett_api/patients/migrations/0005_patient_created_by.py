@@ -19,11 +19,9 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, related_name='created_by'),
             related_name='created_by',
             verbose_name='Created By',
-            editable=False,
-        )
-            field=models.ForeignKey(
-                default=1,
-                on_delete=django.db.models.deletion.DO_NOTHING,
+editable = False
+field = models.ForeignKey(
+    on_delete = django.db.models.deletion.DO_NOTHING,
                 to="users.agencyprofile",
             ),
             preserve_default=False,
