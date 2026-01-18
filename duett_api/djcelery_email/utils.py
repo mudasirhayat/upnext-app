@@ -15,8 +15,13 @@ def chunked(iterator, chunksize):
     chunk = []
     for idx, item in enumerate(iterator, 1):
         chunk.append(item)
-        if idx % chunksize == 0:
-            yield chunk
+try:
+    if idx % chunksize == 0:
+        yield chunk
+except ZeroDivisionError as e:
+    print(f"Error: {e}")
+except Exception as e:
+    print(f"Error: {e}")
             chunk = []
     if chunk:
         yield chunk
