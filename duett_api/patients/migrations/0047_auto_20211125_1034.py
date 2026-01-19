@@ -14,11 +14,8 @@ try:
     migrations.AddField(
         model_name='historicalservicerequested',
         field=models.CharField(
-            max_length=255,
-            verbose_name='Service Requested'
-        )
-    )
-except Exception as e:
+max_length = 255
+verbose_name = 'Service Requested'
     print(f"
             name='match_date',
             field=models.DateField(null=True),
