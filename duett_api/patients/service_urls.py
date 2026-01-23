@@ -13,11 +13,10 @@ urlpatterns = [
     ),
     path(
         "<int:service_pk>/cancel-interest/",
-        ServiceInterestCancelView.as_view(),
+ServiceInterestCancelView.as_view(),
         name="provider-interest-cancel",
-    ),
-    path(
-        "<int:service_pk>/remove-match/",
+        "<int:service_pk>/remove-match/", 
+        name="remove-match"
         RemoveProviderMatchViewSet.as_view(),
         name="remove-match",
     ),
