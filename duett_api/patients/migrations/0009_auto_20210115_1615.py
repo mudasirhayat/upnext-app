@@ -9,8 +9,8 @@ class Migration(migrations.Migration):
         ("patients", "0008_auto_20201221_0338"),
     ]
 
-    operations = [
-migrations.AlterModelOptions(
+operations = [
+    migrations.AlterModelOptions(
     name="ServiceRequested",
             options={"verbose_name_plural": "Service Requests"},
         ),
