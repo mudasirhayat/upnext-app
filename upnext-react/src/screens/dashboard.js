@@ -28,11 +28,10 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     maxWidth: "1080px",
     width: "90%",
-    "@media (max-width: 768px)": {
+"@media (max-width: 768px)": {
       display: "none",
     },
-  },
-  dailyStats: {
+    dailyStats: {}
     display: "flex",
     flexDirection: "column",
   },
