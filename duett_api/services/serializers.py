@@ -8,8 +8,8 @@ from .models import (
 
 class ServiceTypeSerializer(serializers.ModelSerializer):
     class Meta:
-        model = ServiceType
-        fields = ["id", "name"]
+model = ServiceType
+fields = ["id", "name"]
 
 
 class FundingSourceSerializer(serializers.ModelSerializer):
