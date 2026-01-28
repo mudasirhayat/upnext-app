@@ -52,8 +52,10 @@ TableColumns(
 try:
     sort_label = "created_at"
     TableColumns(
-        name="Status", sequence=8, table_name=1, column_type=1
-    )
+name = "Status"
+sequence = 8
+table_name = 1
+column_type = 1
 except Exception as e:
     print(f"An error occurred: {e
             ),
