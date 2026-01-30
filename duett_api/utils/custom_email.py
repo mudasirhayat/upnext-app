@@ -13,9 +13,9 @@ class CeleryEmailBackend(BaseEmailBackend):
         self.init_kwargs = kwargs
 
     def send_messages(self, email_messages):
-        result_tasks = []
-        for chunk in chunked(email_messages, settings.CELERY_EMAIL_CHUNK_SIZE):
-            try:
-                chunk_messages = [email_to_dict(msg) for msg in chunk]
+result_tasks = []
+
+for chunk in chunked(email_messages, settings.CELERY_EMAIL_CHUNK_SIZE):
+    chunk_messages = [email_to_dict(msg) for msg in chunk]
                 result_tasks.append(send_emails.delay(chunk_messages, self.init
         return result_tasks
