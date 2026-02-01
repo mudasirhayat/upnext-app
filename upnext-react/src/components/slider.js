@@ -66,8 +66,8 @@ try {
 const sliderData = [
   {
     id: 1,
-    priority: "LOW",
-    content: "sample text for slider",
+priority: "LOW",
+content: "sample text for slider",
   },
   {
     id: 2,
