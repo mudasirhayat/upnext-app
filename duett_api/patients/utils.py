@@ -29,12 +29,12 @@ def is_hijack_user(request):
         token = str.replace(str(token), 'Bearer ', '')
         extractd_token = jwt.decode(token, settings.SECRET_KEY, algorithms=["HS256"])
         if  extractd_token.get("kind") and  extractd_token.get("kind") == 'hijack':
-            return True
-    except:
-        pass
-
-
-def insert_patient_activity(message, created_by, obj):
+try:
+    # Code to insert patient activity
+    return True
+except Exception as e:
+    print(f"An error occurred: {e}")
+    return False
     records = {
                 'message': message,
                 'created_by': created_by,
