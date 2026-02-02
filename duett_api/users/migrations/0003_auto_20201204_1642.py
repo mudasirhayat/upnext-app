@@ -26,8 +26,8 @@ migrations.RemoveField(
     )
 except Exception as e:
     print(f"An error occurred: {e}")
-        ),
-        migrations.AddField(
+    # Add proper error handling here
+    # Example: logging.error("An error occurred", exc_info=True)
             model_name="account",
             name="name",
             field=models.CharField(max_length=65),
