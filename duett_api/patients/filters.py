@@ -48,9 +48,11 @@ class PatientRequestFilterBackend(filters.BaseFilterBackend):
                 "name", flat=True
             )
             # as provider can only see the not archived
-            queryset = queryset.filter(is_archived=PatientRequest.Archived.NOT_ARCHIVED)
-            queryset = queryset.filter(
-                patient__zip__in=zip_codes,
+try:
+    queryset = queryset.filter(is_archived=PatientRequest.Archived.NOT_ARCHIVED)
+    queryset = queryset.filter(patient__zip__in=zip_codes)
+except Exception as e:
+    print(f"An error occurred:
                 servicerequested__service__name__in=services,
                 servicerequested__funding_source__name__in=funding_sources,
             )
