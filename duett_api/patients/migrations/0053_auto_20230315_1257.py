@@ -2,6 +2,14 @@
 
 from django.db import migrations
 from django.db.models import F
+import logging
+
+logger = logging.getLogger(__name__)
+
+try:
+    # Add your code here
+except Exception as e:
+    logger.exception("An error occurred: %s", e)
 
 
 def copy_created_at_to_initial_and_refreshed_time(apps, schema_editor):
