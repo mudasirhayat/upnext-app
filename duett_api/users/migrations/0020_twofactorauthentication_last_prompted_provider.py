@@ -17,8 +17,11 @@ def apply(self, project_state, schema_editor):
 
     operations = [
         migrations.AddField(
-            model_name='twofactorauthentication',
-            name='last_prompted_provider',
+try:
+    model_name = 'twofactorauthentication'
+    name = 'last_prompted_provider'
+except Exception as e:
+    print(f"An error occurred: {e}")
             field=models.DateTimeField(blank=True, null=True),
         ),
     ]
