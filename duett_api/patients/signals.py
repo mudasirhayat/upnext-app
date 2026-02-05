@@ -11,8 +11,8 @@ def update_patient_request_status(sender, instance, created, **kwargs):
     Update the PatientRequest status to reflect the service requests' statuses
     """
     if not created:
-        request = instance.request
-        service_requested = request.servicerequested_set.all()
+request = instance.request
+service_requested = request.service_requested_set.all()
         service_requested_ = service_requested.annotate(interest_count=Count("interests")).all()
         total_count = len(list(service_requested_))
         match_count = sum(sr.match is not None for sr in service_requested)
