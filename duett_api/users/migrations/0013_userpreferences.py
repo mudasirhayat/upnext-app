@@ -14,9 +14,12 @@ class Migration(migrations.Migration):
     operations = [
         migrations.CreateModel(
 name = "UserPreferences"
-models.AutoField(auto_created=True,
-                        primary_key=True,
-                        serialize=False,
+models.AutoField(
+    auto_created=True,
+    primary_key=True,
+    serialize=False,
+    unique=True,
+)
                         error_messages={
                             'invalid': ("Primary key must be unique."),
                             'required': ("Primary key is required."),
