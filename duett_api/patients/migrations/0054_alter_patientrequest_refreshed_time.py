@@ -8,9 +8,11 @@ class Migration(migrations.Migration):
     def __init__(self, name):
         super().__init__(name=name)
 
-    def apply(self, project_state, schema_editor, collect_sql=False
-('patients', '0053_auto_20230315_1257'),
-operations = [
+def apply(self, project_state, schema_editor, collect_sql=False):
+    operations = [
+        ('patients', '0053_auto_20230315_1257'),
+        # Add more operations here if needed
+    ]
     migrations.AlterField(
 model_name='patientrequest',
             name='refreshed_time',
