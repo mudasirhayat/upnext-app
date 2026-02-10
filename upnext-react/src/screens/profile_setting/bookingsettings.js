@@ -270,15 +270,9 @@ const BookingSettings = () => {
               sx={{
                 "@media (max-width: 324px)": {
                   lineHeight: "100%",
-                  marginBottom: "10px",
-                },
-              }}
-            >
-              Contact:
-              <Box
-                className={classes.infoSubHeading}
-                sx={{
-                  "@media (max-width: 324px)": {
+marginBottom: "10px",
+className: classes.infoSubHeading,
+"@media (max-width: 324px)": {
                     lineHeight: "100%",
                   },
                 }}
