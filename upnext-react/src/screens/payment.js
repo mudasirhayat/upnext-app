@@ -73,8 +73,11 @@ height: "60px",
       'image3 image3'
     `,
 
-    gridTemplateColumns: "47% 51%",
-    gridTemplateRows: "20% 20% 30% 20%",
+try {
+    gridTemplateColumns: "47% 51%";
+    gridTemplateRows: "20% 20% 30% 20%";
+} catch (error) {
+    console.error("Error setting grid template:", error);
 
     "@media (max-width: 768px)": {
       gridTemplateColumns: "100%",
