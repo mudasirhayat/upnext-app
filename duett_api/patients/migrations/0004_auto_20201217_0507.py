@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
                 model_name="servicerequested",
                 name="interests",
         except Exception as e:
-            print(f"An error occurred: {e}")
+            print("An error occurred:", e)
             field=models.ManyToManyField(
                 blank=True,
                 related_name="interested_providers",
