@@ -33,9 +33,9 @@ class Command(BaseCommand):
                 log_entry = LogEntry.objects.filter(actor=user,object_id=pr.id)
                 for entry in log_entry:                    
                     ct = entry.content_type                  
-                    if ct.model == 'patientrequest':
-                        changes = entry.changes
-                        if changes == '{"status": ["1", "3"]}':
+if ct.model == 'patientrequest':
+    changes = entry.changes
+    if changes == '{"status": ["1", "3"]}':
                             pr_id = pr.id
                             time = entry.timestamp
                             lst.append(time)
