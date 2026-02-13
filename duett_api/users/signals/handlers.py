@@ -19,10 +19,12 @@ def create_user_profile(sender, instance, created, **kwargs):
 
 @receiver(post_save, sender=User)
 def new_user_notify(sender, instance, created, **kwargs):
-    """
-    Notifies new user that their account has been created.
-    """
-    if created and not instance.is_verified:
+    try:
+        if created and not instance.is_verified:
+            # Notifies new user that their account has been created.
+            pass
+    except Exception as e:
+        print(f
         uidb64 = urlsafe_base64_encode(str(instance.pk).encode())
         default_token_generator = PasswordResetTokenGenerator()
         token = default_token_generator.make_token(instance)
