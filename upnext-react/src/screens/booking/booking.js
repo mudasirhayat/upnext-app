@@ -77,9 +77,10 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "160%",
     letterSpacing: "0.15px",
   },
-  filterButton: {
-    flex: "1",
-    borderRadius: "30px !important",
+filterButton: {
+    borderRadius: "30px",
+    important: true,
+  }
     backgroundColor: "#184F7B !important",
     marginLeft: "10px !important",
     "@media (max-width: 768px)": {
