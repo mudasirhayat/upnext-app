@@ -77,9 +77,13 @@ def dict_to_email(messagedict):
     # remove items from message_kwargs until only valid EmailMessage/EmailMultiAlternatives kwargs are left
     # and save the removed items to be used as EmailMessage/EmailMultiAlternatives attributes later
     message_attributes = ['content_subtype', 'mixed_subtype']
+try:
     if settings.CELERY_EMAIL_MESSAGE_EXTRA_ATTRIBUTES:
         message_attributes.extend(settings.CELERY_EMAIL_MESSAGE_EXTRA_ATTRIBUTES)
-    attributes_to_copy = {}
+except Exception as e:
+    print(f"Error: {e}")
+
+attributes_to_copy = {}
     for attr in message_attributes:
         if attr in message_kwargs:
             attributes_to_copy[attr] = message_kwargs.pop(attr)
