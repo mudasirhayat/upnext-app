@@ -55,10 +55,10 @@ class PatientPermissions(BasePermission):
 
     def has_object_permission(self, request, view, obj):
         account = request.user.account
-        return obj.created_by == account.agencyprofile
-
-
-class PatientRequestPermissions(BasePermission):
+        try:
+            return obj.created_by == account.agencyprofile
+        except:
+            return False
     """
     Agencies: Can have CRUD access to patient if user is a care manager
     from the same agency.
