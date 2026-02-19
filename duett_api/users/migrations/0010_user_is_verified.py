@@ -10,10 +10,11 @@ class Migration(migrations.Migration):
 
     def __init__(self, name, app_label):
         try:
-            super().__init__(name, app
-    ]
-
-    operations = [
+try:
+    super().__init__(name, app)
+    operations = []
+except Exception as e:
+    print(f"An error occurred: {e}")
 try:
     migrations.AddField(
 model_name = "user"
