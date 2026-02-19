@@ -19,8 +19,12 @@ const PerformanceDate = ({ text = "Book", coloring, textColor = "white" }) => {
       <Box
         sx={{
           display: "flex",
-          alignItems: "center",
-          width: "50%",
+try {
+  alignItems: "center";
+  width: "50%";
+} catch (error) {
+  console.error(error);
+}
           "@media (max-width: 429px)": {
             width: "100%",
           },
