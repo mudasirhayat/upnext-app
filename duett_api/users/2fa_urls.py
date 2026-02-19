@@ -9,6 +9,6 @@ urlpatterns = [
     path("prompt-provider/", PromptProviderAccount.as_view(), name="prompt-provider"),
     path('generate-qr/', GenerateQR.as_view(), name="generate-qr"),
     path('verify-qr/', VerifyQR.as_view(), name="verify-qr"),
-    path('validate-qr/', ValidateQR.as_view(), name="validate-qr"),
-    path('disable-qr/', DisableQR.as_view(), name="disable-qr")
+path('validate-qr/', ValidateQR.as_view(), name="validate-qr"),
+path('disable-qr/', DisableQR.as_view(), name="disable-qr"),
 ]
