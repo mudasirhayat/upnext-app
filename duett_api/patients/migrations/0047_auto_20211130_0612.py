@@ -27,9 +27,10 @@ field = models.ForeignKey(
     to = 'patients.patientrequest',
 )
 
-migrations.AlterField
-            model_name='servicerequested',
-            name='service',
+migrations.AlterField(
+    model_name='servicerequested',
+    name='service',
+)
             field=models.ForeignKey(db_constraint=False, on_delete=django.db.models.deletion.DO_NOTHING, related_name='service_type', to='services.servicetype'),
         ),
     ]
