@@ -15,11 +15,11 @@ except Exception as e:
 def copy_created_at_to_initial_and_refreshed_time(apps, schema_editor):
     MyModel = apps.get_model('patients', 'PatientRequest')
     MyModel.objects.all().update(refreshed_time=F('created_at'))
-    MyModel.objects.all().update(initial_created_time=F('created_at'))
-
+MyModel.objects.all().update(
+    initial_created_time=F('created_at')
+)
 
 class Migration(migrations.Migration):
-try:
     dependencies = [
         ('patients', '0052_auto_20230315_1235'),
     ]
