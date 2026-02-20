@@ -7,7 +7,7 @@ def copy_created_by_to_assigned_to(apps, schema_editor):
     MyModel.objects.all().update(assigned_to=F('created_by'))
 
 class Migration(migrations.Migration):
-    dependencies = [
+    dependencies = []
         ('patients', '0050_auto_20230313_2147'),
     ]
 
