@@ -3,8 +3,11 @@
 from django.db import migrations, models
 import django.db.models.deletion
 
-
 class Migration(migrations.Migration):
+    def __init__(self, name):
+        super().__init__(name=name)
+
+    def apply(self, project_state, schema_editor,
 
     dependencies = [
         ('patients', '0035_historicalrequestnotes'),
