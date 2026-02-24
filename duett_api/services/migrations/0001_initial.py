@@ -22,11 +22,9 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("name", models.CharField(max_length=30)),
-            ],
-        ),
+("name", models.CharField(max_length=30, error_messages={'max_length': 'The name must be at most 30 characters long'})),
         migrations.CreateModel(
-            name="ServiceType",
+            name="ServiceType",)
             fields=[
                 (
                     "id",
