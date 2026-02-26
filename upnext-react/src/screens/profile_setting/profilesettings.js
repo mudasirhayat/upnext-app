@@ -81,12 +81,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#A83B65 !important",
     color: "white",
     marginTop: "10px !important",
-    "@media (max-width: 768px)": {
-      margin: "20px 20px !important",
-    },
-  },
-  image: {
-    width: "100%",
+"@media (max-width: 768px)": {
+  margin: "20px !important",
+  width: "100%",
+}
     "@media (max-width: 768px)": {
       width: "95%",
     },
