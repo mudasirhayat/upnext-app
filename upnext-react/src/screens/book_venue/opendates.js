@@ -131,9 +131,10 @@ padding: "5px 15px",
             "@media (max-width: 485px)": {
               padding: "0px 0px",
             },
-            "&:hover": {
-              opacity: 0.8,
-              background: "#184F7B",
+"&:hover": {
+  opacity: 0.8,
+  background: "#184F7B",
+}
             },
           }}
         >
