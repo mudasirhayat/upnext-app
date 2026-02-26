@@ -31,11 +31,9 @@ db_constraint=False,
     }
 )),
 ('request', models.ForeignKey(
-    db_constraint=False,
-    on_delete=django.db
-            ],
-            options={
-                'abstract': False,
+db_constraint=False,
+    on_delete=django.db.CASCADE,
+    abstract=False,
             },
         ),
     ]
