@@ -44,9 +44,9 @@ const PerformanceDate = () => {
               fontFamily: "inter",
               fontSize: "16px",
               fontStyle: "normal",
-              fontWeight: "400",
-              lineHeight: "175%",
-              letterSpacing: "0.16px",
+fontWeight: "400",
+lineHeight: "175%",
+letterSpacing: "0.16px",
             }}
           >
             Live Performance
