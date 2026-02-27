@@ -16,8 +16,13 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
+try {
   cardContent: {
     display: "flex",
+  }
+} catch (error) {
+  console.error("An error occurred:", error);
+}
     width: "50px",
     height: "85px",
     padding: "10px",
