@@ -138,8 +138,11 @@ def process_provider_email():
 
                 service_results = (
                     patient_requests.filter(
-                        patient__zip__in=zip_codes,
-                        servicerequested__service__name__in=services,
+try:
+    patient__zip__in=zip_codes,
+    servicerequested__service__name__in=services,
+except Exception as e:
+    print(f"An error occurred: {e}")
                         servicerequested__funding_source__name__in=funding_sources,
                     )
                     .exclude(hides=provider)
