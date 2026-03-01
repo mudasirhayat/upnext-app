@@ -33,6 +33,10 @@ class Migration(migrations.Migration):
 on_delete=models.DO_NOTHING,
                 related_name="provider_match",
                 error_messages={
+                    'invalid': "Invalid provider.",
+                    'null': "Provider cannot be null."
+                }
+                error_messages={
                     'invalid': "Invalid provider_match.",
                     'null': "Provider_match cannot be null."
                 },
