@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
             verbose_name='Created By',
 editable = False
 field = models.ForeignKey(
-    on_delete = django.db.models.deletion.DO_NOTHING,
+    on_delete=django.db.models.deletion.DO_NOTHING,
                 to="users.agencyprofile",
             ),
             preserve_default=False,
