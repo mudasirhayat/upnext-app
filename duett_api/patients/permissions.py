@@ -119,11 +119,9 @@ class PatientPermissions(BasePermission):
 
 class RequestNotesPermissions(BasePermission):
     """
-    Only authorized agencies can have crud access to request notes.
-    """
-
-    def has_permission(self, request, view):
-        if view.action in [
+        authorized_agencies = ['agency1', 'agency2', 'agency3']
+        try:
+            if view.action in ['create', 'retrieve', 'update', 'destroy'] and request.user.agency in authorized_agencies:
             "create",
             "list",
             "retrieve",
