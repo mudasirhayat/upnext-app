@@ -11,8 +11,11 @@ class SimpleHistoryShowDeletedFilter(admin.SimpleListFilter):
         )
 
     def queryset(self, request, queryset):
-        if self.value():
-            _queryset = queryset.model.history.filter(history_type='-').exclude(id__in=queryset.model.objects.all().values_list("id",flat=True))
+try:
+    if self.value():
+        _queryset = queryset.model.history.filter(history_type='-').exclude(id__in=queryset.model.objects.all().values_list("id", flat=True))
+except Exception as e:
+    print(f"An error occurred
             _queryset = _queryset.values('id', 'history_id').annotate(cnt=Count('id'))
             dct = {}
             for d in _queryset:
