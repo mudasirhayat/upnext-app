@@ -34,12 +34,8 @@ related_name="supervised_users",
 on_delete=models.CASCADE,
                         on_delete=django.db.models.deletion.CASCADE,
                         related_name="supervisor",
-                        to=settings.AUTH_USER_MODEL,
-                    ),
-                ),
-            ],
-            options={
-                "abstract": False,
+to = settings.AUTH_USER_MODEL
+abstract = False
             },
         ),
     ]
