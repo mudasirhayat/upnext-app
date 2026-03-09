@@ -18,8 +18,13 @@ class Migration(migrations.Migration):
             name="created_by",
             field=models.ForeignKey(
                 default=1,
-                on_delete=django.db.models.deletion.DO_NOTHING,
+on_delete=django.db.models.deletion.DO_NOTHING,
                 to="users.user",
+                related_name="user",
+                error_messages={
+                    'invalid': "Invalid user.",
+                    'required': "User is required."
+                },
             ),
             preserve_default=False,
         ),
