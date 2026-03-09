@@ -8,6 +8,7 @@ class Migration(migrations.Migration):
     dependencies = [
         ("services", "0002_fundingsource_service_type"),
     ]
+    ]
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args,
