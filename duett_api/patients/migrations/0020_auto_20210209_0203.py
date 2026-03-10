@@ -15,8 +15,13 @@ dependencies = [
         migrations.AlterField(
             model_name="servicerequested",
             name="interests",
-            field=models.ManyToManyField(
+field=models.ManyToManyField(
                 blank=True,
+                error_messages={
+                    'invalid': "Please enter a valid value.",
+                    'invalid_choice': "Please select a valid choice.",
+                    'required': "This field is required.",
+                    'null': "
                 related_name="interested_services",
                 to="users.ProviderProfile",
             ),
