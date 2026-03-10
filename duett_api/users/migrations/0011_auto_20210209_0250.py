@@ -9,8 +9,17 @@ class Migration(migrations.Migration):
         ("users", "0010_user_is_verified"),
     ]
 
+try:
     operations = [
         migrations.AddField(
+            model_name='Book',
+            name='author',
+            field=models.CharField(max_length=100),
+            preserve_default=False,
+        ),
+    ]
+except Exception as e:
+    print(f"An error
             model_name="userprofile",
             name="address",
             field=models.CharField(default="", max_length=200),
