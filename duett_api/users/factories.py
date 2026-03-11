@@ -24,11 +24,12 @@ class AccountFactory(DjangoModelFactory):
 
 class AgencyFactory(DjangoModelFactory):
     class Meta:
-        model = AgencyProfile
-
+try:
+    model = AgencyProfile
     account = factory.SubFactory(AccountFactory, type=2)
-
-
+except Exception as e:
+    print(f"An error occurred: {e}")
+    raise e
 class ProviderFactory(DjangoModelFactory):
     class Meta:
         model = ProviderProfile
