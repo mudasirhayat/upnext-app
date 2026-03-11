@@ -87,8 +87,11 @@ class PatientPermissions(BasePermission):
         if account.type == Account.Types.Agency:
             if view.action == "list":
                 group = request.user.groups.first()
-                if group.name == "Care Agency Admin":
-                    return obj.patient.created_by == account.agencyprofile
+if group.name == "Care Agency Admin":
+    try:
+        return obj.patient.created_by == account.agencyprofile
+    except AttributeError:
+        return False
                 elif group.name == "Care Manager Supervisor":
                     # if they are a supervisor, they can see patients that any
                     # subordinate creates
