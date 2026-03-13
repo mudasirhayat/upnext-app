@@ -92,8 +92,8 @@ function Copyright(props) {
     <Typography align="center" {...props}>
       <FacebookIcon style={{ marginRight: "15px" }} />
       <TwitterIcon style={{ marginRight: "15px" }} />
-      <GitHubIcon style={{ marginRight: "15px" }} />
-      <GoogleIcon />
+<GitHubIcon style={{ marginRight: "15px" }} />
+<GoogleIcon />
     </Typography>
   );
 }
