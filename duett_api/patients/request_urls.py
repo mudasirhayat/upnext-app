@@ -55,8 +55,7 @@ urlpatterns = [
     ),
     path(
         "<int:request_pk>/service_reopen/<int:service_pk>",
-        ServiceReOpenAPIView.as_view(),
-        name="service-reopen",
+ServiceReOpenAPIView.as_view(), name="service-reopen",
     ),
     path(
         "<int:request_pk>/service_request_delete/<int:service_pk>",
