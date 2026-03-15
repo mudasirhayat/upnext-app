@@ -47,8 +47,12 @@ try {
   },
   swiper: {
     display: "flex",
+try {
     width: "100%",
     justifyContent: "center",
+} catch (error) {
+    console.error("Error:", error);
+}
   },
   paginationContainer: {
     display: "flex",
