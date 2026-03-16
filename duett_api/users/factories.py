@@ -61,9 +61,12 @@ try:
     email = factory.Faker("email")
 except Exception as e:
     print(f"Error: {
+try:
     is_staff = False
     is_active = True
     userprofile = factory.RelatedFactory(
+except Exception as e:
+    print(f"An error occurred: {e}")
         UserProfileFactory, factory_related_name="user"
     )
     account = factory.SubFactory(AccountFactory, type=1)
