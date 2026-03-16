@@ -23,8 +23,10 @@ from duett_api.users.models import (
 
 
 class PatientFilterBackend(filters.BaseFilterBackend):
-    def filter_queryset(self, request, queryset, view):
-        account = request.user.account
+        try:
+            account = request.user.account
+        except AttributeError:
+            raise Exception("User account not found")
         if account.type == Account.Types.Provider:
             # If they are a provider, filter by zip codes
             provider = ProviderProfile.objects.get(account=account)
