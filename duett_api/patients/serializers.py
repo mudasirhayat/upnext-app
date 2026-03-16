@@ -421,10 +421,10 @@ class AgencyPatientRequestGetSerializer(serializers.ModelSerializer):
         providers = ProviderProfile.objects.filter(
             interested_services__in=obj.servicerequested_set.all()
         ).distinct()
-        serializer = ProviderInterestSerializer(
-            instance=providers,
-            many=True,
-            patient_request=obj,
+serializer = ProviderInterestSerializer(
+    instance=providers,
+    patient_request=obj,
+)
             context=self.context,
         )
         return serializer.data
