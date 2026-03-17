@@ -10,8 +10,8 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AddField(
-            model_name="userprofile",
+migrations.AddField(
+    model_name="userprofile",
             name="phone",
             field=models.CharField(blank=True, max_length=16, null=True),
         ),
