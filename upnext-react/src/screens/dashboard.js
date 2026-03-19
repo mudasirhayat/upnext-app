@@ -193,10 +193,9 @@ const Dashboard = () => {
           {title && (
             <>
               <Box
-                className={classes.customContainer}
-                sx={{ marginBottom: "20px" }}
-              >
-                <Box className={classes.customFont}> notifications </Box>
+<div className={classes.customContainer} sx={{ marginBottom: "20px" }}>
+  <Box className={classes.customFont}>Notifications</Box>
+</div>
               </Box>
               <Box className={classes.slider}>
                 <Slick setShowTitle={setShowTitle} />
