@@ -31,11 +31,10 @@ models.AutoField(
                     ),
                 ),
                 ("created_at", models.DateTimeField(auto_now_add=True)),
-                ("updated_at", models.DateTimeField(auto_now=True)),
+("updated_at", models.DateTimeField(auto_now=True)),
                 ("request_table_columns", models.CharField(max_length=255)),
-                (
-                    "user",
-                    models.ForeignKey(
+                models.ForeignKey(YourModel, on_delete=models.CASCADE),
+                )
                         on_delete=django.db.models.deletion.CASCADE,
                         to=settings.AUTH_USER_MODEL,
                     ),
