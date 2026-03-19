@@ -10,8 +10,11 @@ service_router = routers.NestedSimpleRouter(
 )
 service_router.register(
     "services", FundingServiceViewSet, basename="funding_sources"
-from django.urls import path, include
-from django.conf import settings
+try:
+    from django.urls import path, include
+    from django.conf import settings
+except ImportError as e:
+    print(f"Error importing Django modules: {e}")
 from django.conf.urls.static import static
 from rest_framework.routers import DefaultRouter
 from rest_framework_nested import routers
