@@ -231,19 +231,13 @@ const BookingSettings = () => {
                     <Rating />
                   </Box>
                   <Box className={classes.flexColContainer}>
-                    <Box className={classes.text1}>98</Box>
-                    <Box className={classes.text2}>Rating</Box>
-                  </Box>
-                </Box>
-              </Box>
-            </Box>
-          </Box>
-        </Box>
-      </Box>
-
-      <Box
-        sx={{
-          display: "flex",
+<Box className={classes.text1}>
+  98
+</Box>
+<Box className={classes.text2}>
+  Rating
+</Box>
+display: "flex";
           flexDirection: "column",
           width: "51%",
           gap: "20px",
