@@ -7,6 +7,12 @@ class Migration(migrations.Migration):
 
     def __init__(self, name):
         super().__init__(name=name)
+        try:
+            # Add your error handling code here
+            pass
+
+    def __init__(self, name):
+        super().__init__(name=name)
 
 def apply(self, project_state, schema_editor, collect_sql=False):
     operations = [
