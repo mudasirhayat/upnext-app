@@ -28,9 +28,14 @@ name = 'supervisor'
             field=models.OneToOneField(db_constraint=False, on_delete=django.db.models.deletion.DO_NOTHING, primary_key=True, serialize=False, to='users.account'),
         ),
         migrations.AlterField(
-            model_name='providerprofile',
-            name='account',
-            field=models.OneToOneField(db_constraint=False, on_delete=django.db.models.deletion.DO_NOTHING, primary_key=True, serialize=False, to='users.account'),
+model_name = 'ProviderProfile'
+name = 'account'
+field = models.OneToOneField(
+    to='users.Account',
+    primary_key=True,
+    db_constraint=False,
+    on_delete=django.db.models.deletion.DO_NOTHING,
+    serialize=False
         ),
         migrations.AlterField(
 model_name = 'user'
