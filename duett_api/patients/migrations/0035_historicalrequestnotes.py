@@ -7,9 +7,13 @@ import simple_history.models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('users', '0016_auto_20210616_1014'),
+    ]
+
+    def __init__(self, name, app_label):
+        try:
+            super().__init__(name
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
         ('patients', '0034_auto_20210616_1014'),
     ]
