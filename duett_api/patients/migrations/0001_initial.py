@@ -11,10 +11,9 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ("services", "0001_initial"),
-        ("users", "0004_auto_20201215_2013"),
-    ]
-
-    operations = [
+table_name = "users"
+migration_name = "0004_auto_20201215_2013"
+operations = []
         migrations.CreateModel(
             name="Patient",
             fields=[
