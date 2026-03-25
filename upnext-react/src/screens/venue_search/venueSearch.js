@@ -122,10 +122,13 @@ const VenueSearch = () => {
         <Box
           sx={{ mr: 2, cursor: "pointer" }}
           onClick={() => {
-            setShowSearch(true);
-          }}
-        >
-          <SearchIcon />
+try {
+  setShowSearch(true);
+} catch (error) {
+  console.error(error);
+} finally {
+  <SearchIcon />;
+}
         </Box>
       </Box>
       <Box className={classes.container}>
