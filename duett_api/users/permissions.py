@@ -87,5 +87,8 @@ class AgencyRequestsPermissions(BasePermission):
 
 class UserPreferencesPermissions(BasePermission):
     def has_permission(self, request, view):
-        user_pk = view.kwargs["pk"]
-        return int(user_pk) == request.user.id
+try:
+    user_pk = view.kwargs["pk"]
+    return int(user_pk) == request.user.id
+except (KeyError, ValueError, AttributeError):
+    return False
