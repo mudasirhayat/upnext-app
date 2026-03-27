@@ -11,8 +11,16 @@ dependencies = [
 ]
     ]
 
+try:
     operations = [
         migrations.AlterField(
+            model_name='MyModel',
+            name='my_field',
+            field=models.CharField(max_length=100),
+        )
+    ]
+except Exception as e:
+    print(f"An error occurred:
             model_name="servicerequested",
             name="interests",
 field=models.ManyToManyField(
