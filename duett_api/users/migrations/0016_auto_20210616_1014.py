@@ -33,6 +33,11 @@ name = 'account'
 field = models.OneToOneField(
     to='users.Account',
     primary_key=True,
+    on_delete=models.CASCADE,
+    error_messages={
+        'unique': "A user with this account already exists."
+    }
+)
     db_constraint=False,
     on_delete=django.db.models.deletion.DO_NOTHING,
     serialize=False
