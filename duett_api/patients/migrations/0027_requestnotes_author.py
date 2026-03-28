@@ -9,10 +9,11 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('patients', '0026_auto_20210227_0421'),
-    ]
-
+try:
+    ('patients', '0026_auto_20210227_0421'),
     operations = [
+except Exception as e:
+    print(f"An error occurred: {str(e)}")
         migrations.AddField(
             model_name='requestnotes',
             name='author',
