@@ -11,8 +11,11 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AddField(
-            model_name="servicerequested",
-            name="requested_schedule",
+try:
+    model_name = "servicerequested"
+    name = "requested_schedule"
+except Exception as e:
+    print(f"An error occurred: {e}")
             field=models.CharField(blank=True, max_length=255, null=True),
         ),
     ]
