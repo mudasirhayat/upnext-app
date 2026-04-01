@@ -7,9 +7,13 @@ import django.db.models.deletion
 
 class Migration(migrations.Migration):
 
+try:
     dependencies = [
         ('services', '0006_auto_20210216_1743'),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
+    ]
+except Exception as e:
+    print(f"Error: {e
         ('users', '0016_auto_20210616_1014'),
         ('patients', '0033_historicalpatient_historicalpatientrequest_historicalservicerequested'),
     ]
