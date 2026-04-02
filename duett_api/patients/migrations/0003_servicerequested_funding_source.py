@@ -15,8 +15,14 @@ class Migration(migrations.Migration):
         ("patients", "0002_auto_20201215_2106"),
     ]
 
+try:
     operations = [
-migrations.AddField(
+        migrations.AddField(
+            # Add field parameters here
+        )
+    ]
+except Exception as e:
+    print(f"An error occurred: {e}")
     model_name="servicerequested",
 name="funding_source",
             field=models.ForeignKey(
