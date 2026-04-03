@@ -288,8 +288,11 @@ class TwoFactorAuthenticationAdmin(admin.ModelAdmin):
         return custom_urls + urls
 
     def remove_2fa(self, request, pk):
-        current_site = Site.objects.get_current()
-        url = f"https://{current_site.domain}/admin/users/twofactorauthentication/"
+try:
+    current_site = Site.objects.get_current()
+    url = f"https://{current_site.domain}/admin/users/twofactorauthentication/"
+except Site.DoesNotExist:
+    url = None
         url = url.replace("app", "api", 3)
         try:
             TwoFactorAuthentication.objects.filter(id=pk).update(
