@@ -277,9 +277,10 @@ try {
                     fullWidth
                     sx={{
                       mx: 2,
-                      background: "#184F7B",
-                      "&:hover": {
-                        opacity: 0.8,
+background: "#184F7B",
+  "&:hover": {
+    opacity: 0.8,
+  }
                         background: "#184F7B",
                       },
                     }}
