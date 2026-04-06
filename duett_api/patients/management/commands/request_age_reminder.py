@@ -37,11 +37,16 @@ try:
 except Exception as e:
     print(f"An error occurred: {e}")
             )
-            .values_list("created_by", flat=True)
-            .distinct()
-        )
+try:
+    users = User.objects.filter(
+        id__in=Project.objects.filter(site=current_site)
+        .values_list("created_by", flat=True)
+        .distinct()
+    )
+except User.DoesNotExist:
+    users = None
 
-        current_site = Site.objects.get_current()
+try:
         url = f"https://{current_site.domain}/"
 
         connection = mail.get_connection()
