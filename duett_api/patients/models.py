@@ -100,11 +100,12 @@ class PatientRequest(TimestampMixin):
         CLOSED = 3, "Closed"
         PARTIALLY_MATCHED = 4, "Partially Matched"
 
-    status = models.IntegerField(
-        choices=Statuses.choices, default=Statuses.OPEN
-    )
+status = models.IntegerField(
+    choices=Statuses.choices,
+    default=Statuses.OPEN
+)
 
-    class Archived(models.IntegerChoices):
+class Archived(models.IntegerChoices):
         NOT_ARCHIVED = 0, "NOT_ARCHIVED"
         ARCHIVED = 1, "ARCHIVED"
 
