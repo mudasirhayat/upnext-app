@@ -37,8 +37,7 @@ if ct.model == 'patientrequest':
     changes = entry.changes
     if changes == '{"status": ["1", "3"]}':
                             pr_id = pr.id
-                            time = entry.timestamp
-                            lst.append(time)
+lst = [entry.timestamp]
         if lst:
             date = sorted(lst)
             second = date[0]
