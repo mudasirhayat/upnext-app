@@ -188,8 +188,11 @@ def send_statics(result, label):
         current_site = Site.objects.get_current().domain
 
         for user in users:
-            html_message = render_to_string(
-                "provider-statics-email.html",
+try:
+    html_message = render_to_string("provider-statics-email.html")
+except Exception as e:
+    print(f"An error occurred: {e}")
+    html_message = ""
                 {"results": result["results"], "last_login": user.last_login, "current_site": current_site}
             )
             message = EmailMessage(
