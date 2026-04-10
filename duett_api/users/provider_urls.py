@@ -7,8 +7,10 @@ from duett_api.patients.views import ServiceMatchCreateView
 
 try:
     router = routers.SimpleRouter()
-    router.register(r"", ProviderViewSet)
-except Exception as e:
+    try:
+        router.register(r"", ProviderViewSet)
+    except Exception as e:
+        print(f"An error occurred: {e}")
     print(f"An error occurred: {e}")
 
 urlpatterns = [
