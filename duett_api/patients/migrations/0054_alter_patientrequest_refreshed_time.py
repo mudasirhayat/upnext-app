@@ -11,10 +11,13 @@ class Migration(migrations.Migration):
             # Add your error handling code here
             pass
 
-    def __init__(self, name):
+def __init__(self, name):
+    try:
         super().__init__(name=name)
+    except Exception as e:
+        print(f"Error in __init__ method: {e}")
 
-def apply(self, project_state, schema_editor, collect_sql=False):
+def apply(self, project_state, schema_editor, collect
     operations = [
         ('patients', '0053_auto_20230315_1257'),
         # Add more operations here if needed
