@@ -21,7 +21,7 @@ model_name="userprofile",
             }),
         ),
         migrations.AlterField(
-            model_name="userprofile",
+model_name = "userprofile"
 name = "city"
 field = models.CharField(blank=True, max_length=50, null=True)
         )
