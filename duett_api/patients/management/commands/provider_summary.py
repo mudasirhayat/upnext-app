@@ -3,9 +3,9 @@ from duett_api.patients.admin import AuditLogEntryAdmin
 from django.core.management.base import BaseCommand
 from django.utils import timezone
 from duett_api.users.models import User
-from duett_api.patients.models import PatientRequest, ServiceRequested
 import datetime
 import json
+from duett_api.patients.models import PatientRequest, ServiceRequested
 
 from django.db.models import Avg
 
