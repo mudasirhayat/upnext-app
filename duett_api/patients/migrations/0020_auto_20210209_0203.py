@@ -26,6 +26,9 @@ except Exception as e:
 field=models.ManyToManyField(
                 blank=True,
                 error_messages={
+                    'invalid': 'Invalid data for ManyToMany field',
+                    'invalid_choice': 'Invalid choice for ManyToMany field',
+                    'limit_choices_to': 'Limit choices to for ManyToMany
                     'invalid': "Please enter a valid value.",
                     'invalid_choice': "Please select a valid choice.",
                     'required': "This field is required.",
