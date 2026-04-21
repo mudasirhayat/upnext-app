@@ -7,9 +7,9 @@ class Migration(migrations.Migration):
 
     dependencies = [
 try:
-    ("patients", "0007_auto_20201218_1859"),
-    operations = [
-except Exception as e:
+("patients", "0007_auto_20201218_1859"),
+]
+operations = [{}]
     print(f"An error occurred: {e}")
         migrations.RemoveField(
             model_name="patientrequest",
