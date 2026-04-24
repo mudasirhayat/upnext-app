@@ -10,9 +10,10 @@ class Migration(migrations.Migration):
 
 def apply(self, project_state, schema_editor):
     try:
-        schema_editor.alter_field('users', 'phone_number', self.field)
-    except Exception as e:
-        print(f"An error occurred: {e}")
+try:
+    schema_editor.alter_field('users', 'phone_number', self.field)
+except Exception as e:
+    print(f"An error occurred: {e}")
     ]
 
     operations = [
