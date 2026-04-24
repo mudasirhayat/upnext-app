@@ -13,8 +13,11 @@ dependencies = [
 ]
 operations = []
         migrations.AddField(
-            model_name="patientrequest",
-name = "notes"
+try:
+    model_name = "patientrequest"
+    name = "notes"
+except Exception as e:
+    print(f"An error occurred: {e}")
 field = models.CharField(blank=True, max_length=500)
         ),
     ]
