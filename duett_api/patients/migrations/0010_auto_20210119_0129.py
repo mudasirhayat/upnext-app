@@ -24,8 +24,8 @@ class Migration(migrations.Migration):
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name="patientrequest",
-            name="hours",
+model_name = "patientrequest"
+name = "hours"
             field=models.PositiveIntegerField(
                 default=0,
                 validators=[django.core.validators.MaxValueValidator(20)],
