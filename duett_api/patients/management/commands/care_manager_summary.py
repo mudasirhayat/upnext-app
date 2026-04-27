@@ -28,9 +28,10 @@ class Command(BaseCommand):
             p_request = PatientRequest.objects.filter(created_by=user,refreshed_time__date__range=[start_date, end_date])
             broken = PatientRequest.objects.filter(created_by=user,status=3,refreshed_time__date__range=[start_date, end_date])
             print(user,"count", p_request.count())
-            print(user,"broken_count", broken.count())
-            for pr in p_request:
-                log_entry = LogEntry.objects.filter(actor=user,object_id=pr.id)
+print(f"{user} broken_count {broken.count()}")
+
+for pr in p_request:
+    log_entry = LogEntry.objects.filter(actor=user, object_id=pr.id)
                 for entry in log_entry:                    
                     ct = entry.content_type                  
 if ct.model == 'patientrequest':
