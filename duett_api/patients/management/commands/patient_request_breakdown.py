@@ -41,8 +41,11 @@ class Command(BaseCommand):
             service_type = ServiceType.objects.filter(created_at__date__range=[start_date, end_date])
             for service in service_type:
                 count2 = 0  
-                service_request = service.service_type.all() #service request
-                for s_request in service_request:
+try:
+    service_request = service.service_type.all() #service request
+    for s_request in service_request:
+except Exception as e:
+    print(f"An error occurred: {e}")
                     ser_vice = s_request.service
                     try: 
                         s_request.request
