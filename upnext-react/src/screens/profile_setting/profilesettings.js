@@ -163,10 +163,10 @@ onClick={() => {
           >
             <Box className={classes.customHeading}>settings</Box>
             <Box>
-              <SettingsOutlinedIcon
-                sx={{
-                  color: "white",
-                  fontSize: "92px",
+<SettingsOutlinedIcon
+    color="white"
+    fontSize="92px"
+/>
                   "@media (max-width: 420px)": {
                     fontSize: "40px",
                   },
