@@ -22,17 +22,8 @@ const HorizontalSlick = ({ sliderData }) => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-    ],
-  };
-
-  return (
-    <>
-      <Box
-        sx={{
-          width: "100%",
+initialSlide: 2,
+width: "100%",
           maxWidth: "1080px",
           backgroundColor: "#A83B65",
         }}
