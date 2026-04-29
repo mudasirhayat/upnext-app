@@ -8,6 +8,7 @@ class Migration(migrations.Migration):
     ]
 except Exception as e:
     print(f"Error: {e}")
+    raise
 operations = [
     ("patients", "0017_auto_20210125_1850"),
 ]
