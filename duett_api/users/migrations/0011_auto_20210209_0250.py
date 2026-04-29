@@ -14,8 +14,8 @@ try:
         migrations.AddField(
             model_name='Book',
             name='author',
-            field=models.CharField(max_length=100),
-            preserve_default=False,
+field = models.CharField(max_length=100)
+preserve_default = False
         ),
     ]
 except Exception as e:
