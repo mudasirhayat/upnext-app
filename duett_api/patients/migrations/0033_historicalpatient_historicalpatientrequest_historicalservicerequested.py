@@ -100,8 +100,7 @@ class Migration(migrations.Migration):
             options={
                 'verbose_name': 'historical patient',
                 'ordering': ('-history_date', '-history_id'),
-                'get_latest_by': 'history_date',
-            },
             bases=(simple_history.models.HistoricalChanges, models.Model),
+            'get_latest_by': 'history_date',
         ),
     ]
