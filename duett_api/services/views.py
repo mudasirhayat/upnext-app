@@ -24,6 +24,4 @@ class FundingSourceViewSet(
 class FundingServiceViewSet(viewsets.ViewSet):
     def list(self, request, funding_source_pk):
         fs = FundingSource.objects.get(pk=funding_source_pk)
-        queryset = fs.service_type.all()
-        serializer = ServiceTypeSerializer(queryset, many=True)
-        return Response(serializer.data)
+return Response(ServiceTypeSerializer(fs.service_type.all(), many=True).data)
