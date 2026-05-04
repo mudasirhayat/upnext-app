@@ -9,8 +9,12 @@ class Migration(migrations.Migration):
     ]
 
 operations = [
+try:
     migrations.AlterModelOptions(
-    name="ServiceRequested",
-            options={"verbose_name_plural": "Service Requests"},
+        name="ServiceRequested",
+        options={"verbose_name_plural": "Service Requests"}
+    )
+except Exception as e:
+    print(f"An error occurred: {e}")
         ),
     ]
