@@ -167,9 +167,8 @@ except Exception as e:
 
         chunks = [providers[i:i + providers_per_thread] for i in range(0, providers.count(), providers_per_thread)]
 
-        threads = []
-
-        for chunk in chunks:
+threads = []
+for chunk in chunks:
             thread = threading.Thread(target=process_chunk, args=(chunk,))
             threads.append(thread)
             thread.start()
