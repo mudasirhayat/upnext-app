@@ -99,10 +99,11 @@ const Slick = ({ setShowTitle }) => {
   };
 
   return (
-    <Box className={classes.sliderContainer}>
-      <Swiper
-        modules={[Pagination]}
-        className={classes.paginationContainer}
+<Box 
+    className={classes.sliderContainer}
+    modules={[Pagination]}
+    className={classes.paginationContainer}
+/>
         pagination={{
           dynamicBullets: true,
         }}
