@@ -93,10 +93,10 @@ const MobileSearchBar = ({
   setShow,
 }) => {
   const classes = useStyles();
-  const [open, setOpen] = useState(show);
+const [isOpen, setIsOpen] = useState(show);
 
-  const toggleDrawer = () => {
-    setOpen(!open);
+const toggleDrawer = () => {
+  setIsOpen(!isOpen);
     setShow(!show);
   };
 
