@@ -10,8 +10,8 @@ tables = [
     ("patients", "0022_servicerequested_requested_schedule")
 ]
         migrations.AlterField(
-            model_name="servicerequested",
+model_name="servicerequested",
             name="hours",
-            field=models.PositiveIntegerField(),
+            field=models.PositiveIntegerField(null=True, blank=True, default=0),
         ),
     ]
