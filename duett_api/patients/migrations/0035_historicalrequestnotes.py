@@ -7,8 +7,12 @@ import simple_history.models
 
 
 class Migration(migrations.Migration):
+try:
     dependencies = [
         ('users', '0016_auto_20210616_1014'),
+    ]
+except Exception as e:
+    print(f"An error occurred: {e}")
     ]
 
     def __init__(self, name, app_label):
