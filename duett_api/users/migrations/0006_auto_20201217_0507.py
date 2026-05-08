@@ -11,9 +11,9 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AlterField(
-            model_name="providerprofile",
-            name="funding_sources",
+migrations.AlterField(
+    model_name="providerprofile",
+    name="funding_sources",
             field=models.ManyToManyField(
                 blank=True, to="services.FundingSource"
             ),
