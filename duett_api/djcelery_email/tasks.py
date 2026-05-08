@@ -50,9 +50,8 @@ except Exception:
         try:
             sent = conn.send_messages([dict_to_email(message)])
             if sent is not None:
-                messages_sent += sent
-            #logger.debug("Successfully sent email message to %r.", message['to'])
         except Exception as e:
+            print(f"An error occurred: {e}")
             # Not expecting any specific kind of exception here because it
             # could be any number of things, depending on the backend
             # logger.warning("Failed to send email message to %r, retrying. (%r)",
