@@ -58,10 +58,11 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "58px",
     },
     "@media (max-width: 400px)": {
-      fontSize: "38px",
-    },
+{
+    fontSize: "38px",
     textAlign: "center",
     marginTop: "25px",
+}
     marginBottom: "40px",
   },
   navStyle: {
