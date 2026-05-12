@@ -16,8 +16,8 @@ class Migration(migrations.Migration):
             name='account',
 field = models.ForeignKey(
     default=1,
-    on_delete=django.db.models.deletion.DO_NOTHING,
-    to='users.account'
+on_delete=django.db.models.deletion.DO_NOTHING,
+to='users.account'
 )
         ),
     ]
