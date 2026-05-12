@@ -203,11 +203,9 @@ const VenueRatedCard = ({ active, image }) => {
               }}
             >
               <Box>
-                <LocationOnOutlinedIcon style={{ color: "#3A3541" }} />
-              </Box>
-              <Box>
-                <Box className={classes.text}>The Rochard NYC</Box>
-                <Box className={classes.text}>1305 Lexington Ave, New York</Box>
+<LocationOnOutlinedIcon style={{ color: "#3A3541" }} />
+<Box className={classes.text}>The Rochard NYC</Box>
+<Box className={classes.text}>1305 Lexington Ave, New York</Box>
               </Box>
             </Box>
           </Box>
