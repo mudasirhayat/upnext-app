@@ -4,11 +4,13 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
     dependencies = []
-        ("patients", "0024_tablecolumns"),
-    ]
-
+("patients", "0024_tablecolumns"),
     operations = [
         migrations.AlterModelOptions(
+            name='Patient',
+            options={'verbose_name': 'Patient', 'verbose_name_plural': 'Patients'},
+        ),
+    ]
             name="tablecolumns",
             options={"verbose_name_plural": "Table Columns"},
         ),
