@@ -25,9 +25,15 @@ class Migration(migrations.Migration):
             field=models.DateTimeField(auto_now=True),
         ),
         migrations.AddField(
-            model_name="servicetype",
+model_name="servicetype",
             name="created_at",
             field=models.DateTimeField(
+                auto_now_add=True,
+                error_messages={
+                    'invalid': "Please enter a valid date and time format."
+                }
+            )
+        )
                 auto_now_add=True, default=django.utils.timezone.now
             ),
             preserve_default=False,
