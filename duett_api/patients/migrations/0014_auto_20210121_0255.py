@@ -10,8 +10,8 @@ class Migration(migrations.Migration):
     ]
 
 try:
-    operations = [
-        migrations.AlterField(
+operations = [
+    migrations.AlterField(
             model_name="patientrequest",
             name="field_name",
             field=models.CharField(max_length=100),
