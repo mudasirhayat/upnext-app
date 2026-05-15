@@ -8,8 +8,15 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ("patients", "0011_patient_age"),
+try:
+    migrations.swappable_dependency(settings.AUTH_USER_MODEL)
+except Exception as e:
+    print(f"Error: {e}")
+
+try:
+    ("patients", "0011_patient_age")
+except Exception as e:
+    print(f"Error: {
     ]
 
     operations = [
