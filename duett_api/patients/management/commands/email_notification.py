@@ -21,8 +21,8 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         email_data = EmailData.objects.filter(status=0, email_title = 'send_email_closed')
         current_time = timezone.now()
-        if Site.objects.filter(domain="qa.app.duett.io"):
-            env_label = "QA:"
+if Site.objects.filter(domain="qa.app.duett.io"):
+    env_label = "QA:"
         elif Site.objects.filter(domain="staging.app.duett.io"):
             env_label = "STG:"
         else:
