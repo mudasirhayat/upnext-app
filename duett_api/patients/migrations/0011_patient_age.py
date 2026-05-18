@@ -12,8 +12,10 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="patient",
 name="age",
-            field=models.IntegerField(default=0, error_messages={
-                'invalid': 'Please enter a valid integer value for age.'
+field = models.IntegerField(
+    default=0,
+    error_messages={'invalid': 'Please enter a valid integer value for age.'}
+)
             }),
             preserve_default=False,
         ),
