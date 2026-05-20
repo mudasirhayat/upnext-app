@@ -24,8 +24,8 @@ field = models.ManyToManyField(
             model_name="servicerequested",
             name="declines",
             field=models.ManyToManyField(
-                blank=True,
-                related_name="provider_declines",
+blank=True,
+related_name="provider_declines",
                 to="users.ProviderProfile",
             ),
         ),
