@@ -21,8 +21,8 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("created_at", models.DateTimeField(auto_now_add=True)),
-                ("updated_at", models.DateTimeField(auto_now=True)),
+("created_at", models.DateTimeField(auto_now_add=True, blank=True, null=True)),
+("updated_at", models.DateTimeField(auto_now=True, blank=True, null=True)),
                 ("name", models.CharField(max_length=100)),
                 ("sequence", models.IntegerField()),
                 (
