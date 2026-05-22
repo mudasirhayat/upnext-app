@@ -10,8 +10,12 @@ class Migration(migrations.Migration):
     ]
 
 operations = [
+try:
     migrations.AlterField(
         model_name="patientrequest",
+    )
+except Exception as e:
+    print(f"An error occurred: {e}")
             name="status",
             field=models.IntegerField(
                 choices=[(1, "Open"), (2, "Pending"), (3, "Closed")], default=1
