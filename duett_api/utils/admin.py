@@ -21,11 +21,11 @@ except Exception as e:
             for d in _queryset:
                 dct[d.get('id')] =  d.get('history_id')
             ids = list(dct.values())
-            queryset = queryset.model.history.filter(history_id__in=ids)
-
-        return queryset
-
-
+try:
+    queryset = queryset.model.history.filter(history_id__in=ids)
+except Exception as e:
+    queryset = None
+return queryset
 class SimpleHistoryMixin(SimpleHistoryAdmin):
     def get_changelist(self, request, **kwargs):
         def url_from_result_maker(history=False):
