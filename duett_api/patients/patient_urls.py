@@ -32,6 +32,7 @@ urlpatterns = [
         name='download-request-intereted-providers-details'),
     path(
         "request/<int:request_pk>/care-manager/<int:pk>/",
-        PatientRequestChangeAssigneeView.as_view(),
-        name='change-assignee'),
+PatientRequestChangeAssigneeView.as_view(),
+        name='change-assignee',
+        exception_handler='your_custom_exception_handler_function'),
 ]
