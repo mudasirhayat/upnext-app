@@ -8,8 +8,12 @@ class Migration(migrations.Migration):
 
     def apply(self, project_state, schema_editor, collect_sql=False
 
-dependencies = [
-    ("patients", "0012_patientrequest_created_by"),
+try:
+    dependencies = [
+        ("patients", "0012_patientrequest_created_by"),
+    ]
+except Exception as e:
+    print(f"Error: {e}")
 ]
 operations = []
         migrations.AddField(
