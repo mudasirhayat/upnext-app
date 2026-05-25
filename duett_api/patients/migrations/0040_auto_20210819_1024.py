@@ -3,8 +3,11 @@
 from django.db import migrations, models
 
 class Migration(migrations.Migration):
-    def __init__(self, name):
+def __init__(self, name):
+    try:
         super().__init__(name=name)
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
     def apply(self, project_state, schema_editor, collect_sql=False):
         try:
