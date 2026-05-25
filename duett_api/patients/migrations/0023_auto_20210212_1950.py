@@ -4,10 +4,13 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-tables = [
     ("patients", "0022_servicerequested_requested_schedule")
+]
+
+    def __init__(self, *args, **kwargs):
+        try:
+            super().__init__(*args,
 ]
         migrations.AlterField(
 model_name="servicerequested",
