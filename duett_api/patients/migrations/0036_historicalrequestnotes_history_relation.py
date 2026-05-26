@@ -2,9 +2,13 @@
 
 from django.db import migrations, models
 import django.db.models.deletion
+from django.core.exceptions import ImproperlyConfigured
 
 class Migration(migrations.Migration):
     def __init__(self, name):
+        try:
+            super().__init__(name)
+        except ImproperlyConfig
         super().__init__(name=name)
 
     def apply(self, project_state, schema_editor,
