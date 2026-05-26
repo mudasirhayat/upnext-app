@@ -72,8 +72,8 @@ except Exception as e:
     account = factory.SubFactory(AccountFactory, type=1)
 
 class AgencyProfileFactory(DjangoModelFactory):
-    class Meta:
-        model = AgencyProfile
+class Meta:
+    model = AgencyProfile
     
     account = factory.SubFactory(AccountFactory, type=2)
     
