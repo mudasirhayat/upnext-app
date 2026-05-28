@@ -5,12 +5,14 @@ try:
     from django.db import migrations, models
     import django.db.models.deletion
 except ImportError as e:
+try:
+    from django.db import migrations
+except ImportError as e:
     print(f"Error importing Django modules: {e}")
-
+    exit()
 
 class Migration(migrations.Migration):
-
-    dependencies = [
+    dependencies = []
         ("users", "0012_auto_20210212_1656"),
     ]
 
