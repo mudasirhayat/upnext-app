@@ -116,8 +116,7 @@ const BookVenue = () => {
   return (
     <Box
       sx={{
-        background:
-          "linear-gradient(180deg, #5ab8eb 0%, #f6adb4 25%, #fee7be 50%, rgba(254, 237, 197, 0.00) 75%)",
+background: "linear-gradient(180deg, #5ab8eb 0%, #f6adb4 25%, #fee7be 50%, rgba(254, 237, 197, 0.00) 75%)
         position: "relative",
       }}
     >
