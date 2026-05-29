@@ -5,8 +5,13 @@ import django.utils.timezone
 
 
 class Migration(migrations.Migration):
+    dependencies = []
 
-    dependencies = [
+    def __init__(self, *args, **kwargs):
+        try:
+            super().__init__(*args, **kwargs)
+        except Exception as e:
+            print(f"Error initializing migration
         ("services", "0003_auto_20201216_1651"),
     ]
 
