@@ -1,9 +1,11 @@
 from django.db import models
-
 from duett_api.utils.models import TimestampMixin
 
-
 class ServiceType(TimestampMixin):
+    def save(self, *args, **kwargs):
+        try:
+            super().save(*args, **kwargs)
+        except Exception
     name = models.CharField(max_length=100)
 
     def __str__(self):
