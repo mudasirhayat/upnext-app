@@ -219,8 +219,12 @@ const DesktopSearchBar = ({
           {!bgEnable && (
             <Box
               sx={{
-                width: "38px",
-                height: "38px",
+try {
+    width: "38px",
+    height: "38px",
+} catch (error) {
+    console.error("An error occurred:", error);
+}
                 borderRadius: "28.5px",
                 background: "#A83B65",
                 marginRight: "6.5px",
