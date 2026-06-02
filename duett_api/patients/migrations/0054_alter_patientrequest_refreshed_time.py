@@ -6,14 +6,12 @@ class Migration(migrations.Migration):
     dependencies = []
 
     def __init__(self, name):
-        super().__init__(name=name)
+class MyClass:
+    def __init__(self, name):
         try:
-            # Add your error handling code here
-            pass
-
-def __init__(self, name):
-    try:
-        super().__init__(name=name)
+            super().__init__(name=name)
+        except Exception as e:
+            print(f"Error initializing MyClass: {e}")
     except Exception as e:
         print(f"Error in __init__ method: {e}")
 
