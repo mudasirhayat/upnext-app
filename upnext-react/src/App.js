@@ -38,13 +38,10 @@ function App() {
             element={
               <ThemeProvider theme={theme}>
                 <SignIn />
-              </ThemeProvider>
-            }
-          />
-        </Routes>
-      </Router>
+try {
+    </ThemeProvider>
     </AppContextProvider>
-  );
+} catch (error) {
+    console.error('An error occurred:', error);
 }
-
 export default App;
