@@ -47,8 +47,9 @@ const VerticalSlider = () => {
 
   return (
     <>
-      {!smallScreen ? (
-        <VerticalSlick sliderData={sliderData} />
+if (!smallScreen) {
+  return <VerticalSlick sliderData={sliderData} />;
+}
       ) : (
         <HorizontalSlick sliderData={sliderData} />
       )}
