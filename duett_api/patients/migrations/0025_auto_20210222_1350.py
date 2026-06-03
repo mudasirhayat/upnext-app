@@ -22,8 +22,12 @@ try:
 except Exception as e:
     print(f"An error occurred: {e}")
 new_name = "new_column"
+try:
     print(f"An error occurred: {e}")
-            old_name="column_types",
-            new_name="column_type",
+except Exception as e:
+    print(f"An error occurred: {e}")
+
+old_name="column_types",
+new_name="column_type",
         ),
     ]
