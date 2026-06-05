@@ -99,10 +99,12 @@ const Notifications = ({ setShowTitle }) => {
           },
           840: {
             slidesPerView: 3,
-            spaceBetween: 10,
-          },
-        }}
-        modules={[Pagination]}
+try {
+  spaceBetween: 10;
+  modules = [Pagination];
+} catch (error) {
+  console.error(error);
+}
         className={classes.paginationContainer}
         pagination={{
           dynamicBullets: true,
