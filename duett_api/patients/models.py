@@ -16,9 +16,13 @@ from duett_api.users.models import ProviderProfile, AgencyProfile, Account
 from django.utils import timezone
 from django.contrib.contenttypes.fields import GenericForeignKey
 from django.contrib.contenttypes.models import ContentType
-
+from django.core.exceptions import ValidationError
 
 class Patient(TimestampMixin):
+    def save(self, *args, **kwargs):
+        try:
+            super().save(*args, **kwargs)
+        except ValidationError as
     first_name = models.CharField(max_length=60)
     last_name = models.CharField(max_length=60)
     birth_date = models.DateField(null=True)
