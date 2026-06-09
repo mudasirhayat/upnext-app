@@ -11,9 +11,9 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name="patient",
             name="city",
-            field=models.CharField(max_length=30),
-        ),
-        migrations.AlterField(
+field = models.CharField(max_length=30)
+
+migrations.AlterField
             model_name="patient",
             name="zip",
             field=models.CharField(max_length=5),
