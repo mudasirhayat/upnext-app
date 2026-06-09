@@ -82,13 +82,10 @@ try {
     "@media (max-width: 768px)": {
       gridTemplateColumns: "100%",
       gridTemplateRows: "auto",
-      gridTemplateAreas: `
-      'image1'
-      'image2'
-      'image3'
-    `,
-    },
+gridTemplateAreas: `
     gap: "20px",
+    error: "Invalid grid template area"
+`,
   },
   icon: {
     "@media (max-width: 420px)": {
