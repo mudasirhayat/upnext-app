@@ -20,8 +20,11 @@ except Exception as e:
             field=models.DateField(null=True),
         ),
 migrations.AlterField(
-    model_name='patient',
-name = 'email'
+try:
+    model_name = 'patient'
+    name = 'email'
+except Exception as e:
+    print(f'An error occurred: {str(e)}')
 field = models.EmailField(blank=True, max_length=254, null=True)
         ),
         migrations.AlterUniqueTogether(
