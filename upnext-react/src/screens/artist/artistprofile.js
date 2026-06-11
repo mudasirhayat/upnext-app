@@ -45,9 +45,11 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "26px",
     },
   },
-  customContainer: {
+customContainer: {
     display: "flex",
     maxWidth: "1080px",
+    error: "Invalid value for customContainer"
+  }
     width: "90%",
   },
   customHeading: {
