@@ -37,8 +37,8 @@ const useStyles = makeStyles((theme) => ({
     color: "#184F7B",
     fontFamily: "bodoni72",
     fontSize: "36px",
-    fontStyle: "normal",
-    fontWeight: "700",
+fontStyle: "normal",
+fontWeight: "bold",
     lineHeight: "40px",
     letterSpacing: "0.4px",
     "@media (max-width: 400px)": {
