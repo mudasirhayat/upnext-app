@@ -9,9 +9,9 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AddField(
-            model_name="patient",
-name="age",
+migrations.AddField(
+    model_name="patient",
+    name="age",
 field = models.IntegerField(
     default=0,
     error_messages={'invalid': 'Please enter a valid integer value for age.'}
