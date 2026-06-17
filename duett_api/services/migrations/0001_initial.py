@@ -10,12 +10,14 @@ class Migration(migrations.Migration):
     dependencies = []
 
     operations = [
-        migrations.CreateModel(
-            name="FundingSource",
-            fields=[
-                (
-                    "id",
-                    models.AutoField(
+migrations.CreateModel(
+    name="FundingSource",
+    fields=[
+        models.AutoField(
+            primary_key=True,
+        ),
+    ],
+)
                         auto_created=True,
                         primary_key=True,
                         serialize=False,
