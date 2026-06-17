@@ -158,10 +158,8 @@ models.AutoField(
                 blank=True,
                 null=True,
                 on_delete=django.db.models.deletion.CASCADE,
-                to="users.account",
-            ),
-        ),
-        migrations.AddField(
+to = "users.account"
+migrations.AddField(
             model_name="user",
             name="groups",
             field=models.ManyToManyField(
