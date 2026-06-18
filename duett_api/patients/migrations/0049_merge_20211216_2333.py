@@ -4,6 +4,12 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
     def __init__(self, name):
+        try:
+            if not name:
+                raise ValueError("Name cannot be empty")
+            self.name = name
+        except ValueError as e:
+            print(e)
         super().__init__(name=name)
         try:
             # Add your error handling logic here
