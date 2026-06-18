@@ -13,8 +13,11 @@ print(f"An error occurred: {e}")
 
 operations = [
     migrations.AddField( # Add a field
-        model_name='MyModel',
-        name='my_field',
+try:
+    model_name = 'MyModel'
+    name = 'my_field'
+except Exception as e:
+    print(f'An error occurred: {str(e)}')
         field=models.CharField(max_length=100),
     ),
 ]
