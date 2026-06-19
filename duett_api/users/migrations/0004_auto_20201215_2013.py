@@ -24,8 +24,8 @@ field = models.ManyToManyField(
     )
 
 migrations.AddField
-            model_name="providerprofile",
-            name="zip_codes",
+model_name = "providerprofile"
+name = "zip_codes"
             field=models.ManyToManyField(to="services.ZipCode"),
         ),
     ]
