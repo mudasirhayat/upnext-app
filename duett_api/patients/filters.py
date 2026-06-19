@@ -1,9 +1,11 @@
 from duett_api.patients.models import PatientRequest
 from django_filters import (
+try:
     BaseInFilter,
-    FilterSet,
     NumberFilter,
     BooleanFilter,
+except Exception as e:
+    print(f"An error occurred: {e}")
     CharFilter,
 )
 from django.contrib.auth import get_user_model
