@@ -101,9 +101,12 @@ function Copyright(props) {
 const SignUp = () => {
   const classes = useStyles();
   const navigate = useNavigate();
-  const onSubmit = async (values, action) => {
-    localStorage.setItem("user", JSON.stringify(values));
-    navigate("/");
+    try {
+        localStorage.setItem("user", JSON.stringify(values));
+        navigate("/");
+    } catch (error) {
+        console.error("An error occurred:", error);
+    }
   };
 
   const formik = useFormik({
