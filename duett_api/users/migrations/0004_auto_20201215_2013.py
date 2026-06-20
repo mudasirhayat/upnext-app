@@ -18,8 +18,11 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name="providerprofile",
-            name="services",
-field = models.ManyToManyField(
+try:
+    name = "services"
+    field = models.ManyToManyField()
+except Exception as e:
+    print(f"An error occurred: {e}")
         to="services.ServiceType",
     )
 
