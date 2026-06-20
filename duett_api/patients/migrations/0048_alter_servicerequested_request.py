@@ -11,9 +11,8 @@ dependencies = [
     ]
     ]
 
-    operations = [
-        try:
-            migrations.AlterField(
+operations = [
+    migrations.AlterField(
                 model_name='servicerequested',
                 name='request',
         except Exception as e:
