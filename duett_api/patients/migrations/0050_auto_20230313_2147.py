@@ -16,9 +16,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='historicalpatientrequest',
             name='assigned_to',
-            field=models.ForeignKey(blank=True, db_constraint=False, default=None, null=True, on_delete=django.db.models.deletion.DO_NOTHING, related_name='+', to=settings.AUTH_USER_MODEL),
-        ),
-        migrations.AddField(
+field=models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=django.db.models.deletion.DO_NOTHING, related_name='+', blank=True, null=True)
             model_name='patientrequest',
 name='assigned_to',
             field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.DO_NOTHING, related_name='+', to=settings.AUTH_USER_MODEL),
