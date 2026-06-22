@@ -57,8 +57,12 @@ try {
   paginationContainer: {
     display: "flex",
     width: "100%",
-    justifyContent: "center",
-    padding: "10px 0px",
+try {
+    justifyContent: "center";
+    padding: "10px 0px";
+} catch (error) {
+    console.error("An error occurred:", error);
+}
     "--swiper-pagination-color": "#A83B65",
   },
 }));
