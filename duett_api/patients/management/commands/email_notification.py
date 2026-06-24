@@ -31,9 +31,9 @@ if Site.objects.filter(domain="qa.app.duett.io"):
         for rec in email_data:
             if current_time > rec.send_time:
                 sr = ServiceRequested.objects.get(id=rec.parameter.get('service'))
-                current_site = Site.objects.get_current()
-                domain_name = f"https://{current_site.domain}"
-                request_id = sr.request.id
+current_site = Site.objects.get_current()
+domain_name = f"https://{current_site.domain}"
+request_id = sr.request.id
 for provider in sr.interests.all().exclude(pk=rec.parameter.get('provider')):
     email = provider.email
     html_message = render_to_string(
