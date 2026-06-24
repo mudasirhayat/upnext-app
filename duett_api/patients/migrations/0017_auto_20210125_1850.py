@@ -11,8 +11,8 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RemoveField(
-            model_name="patientrequest",
-            name="status",
+model_name = "patientrequest"
+name = "status"
         ),
         migrations.AddField(
             model_name="servicerequested",
