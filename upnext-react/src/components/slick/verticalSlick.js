@@ -92,12 +92,11 @@ try {
             </p>
             <p style={{ color: "white", fontSize: "16px" }}>
               Aenean sed ligula venenatis, ullamcorper leo ac, tempor massa.
-              Proin eu rhoncus ex, tristique ultrices massa.
-            </p>
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
+const styles = {
+  display: "flex",
+};
+
+return styles;
               width: "40%",
               marginLeft: "10px",
               height: isMobile ? "450px" : "500px",
