@@ -88,10 +88,12 @@ except Exception as e:
             status = request.query_params.get("status_in")
             
             if not status:
-                queryset = queryset.prefetch_related(
-                    Prefetch(
-                        "servicerequested_set",
-                        queryset=ServiceRequested.objects.filter(
+queryset = queryset.prefetch_related(
+    "servicerequested_set",
+    queryset=ServiceRequested.objects.filter(
+        # Add your filter conditions here
+    )
+)
                             ~Q(status=PatientRequest.Statuses.CLOSED) | Q(match=provider),
                             service__name__in=services,
                             funding_source__name__in=funding_sources,
