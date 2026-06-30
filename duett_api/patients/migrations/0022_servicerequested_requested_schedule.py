@@ -4,9 +4,9 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("patients", "0021_auto_20210209_2212"),
+    ]
     ]
 
     operations = [
