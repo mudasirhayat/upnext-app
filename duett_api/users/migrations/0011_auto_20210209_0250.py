@@ -45,10 +45,10 @@ migrations.AddField(
         ),
         migrations.AlterField(
             model_name="user",
-            name="is_active",
-            field=models.BooleanField(default=True),
-        ),
-        migrations.AlterField(
+name = "is_active"
+field = models.BooleanField(default=True)
+
+migrations.AlterField(
             model_name="user",
             name="is_staff",
             field=models.BooleanField(default=False),
