@@ -320,9 +320,12 @@ class PatientRequestFilterSet(FilterSet):
             )
         return queryset
 
-    def _create_provider_status_in_queryset(self, queryset, statuses):
-        """
-provider = self.request.user.account.providerprofile
+def _create_provider_status_in_queryset(self, queryset, statuses):
+    try:
+        provider = self.request.user.account.providerprofile
+    except AttributeError:
+        raise AttributeError("Provider profile not found for the current user.")
+    return provider, queryset.filter(status
 request_filters = Q()
 try:
     service_filters = Q()
